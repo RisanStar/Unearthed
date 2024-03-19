@@ -577,9 +577,10 @@ MonoBehaviour:
   Ground:
     serializedVersion: 2
     m_Bits: 64
-  jumpForce: 12
+  jumpForce: 9
   jumpCooldown: 0.25
   airMultiplier: 0.4
+  fallMultiplier: 2
   jumpKey: 32
 --- !u!54 &1623036629
 Rigidbody:

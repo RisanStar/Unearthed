@@ -23,6 +23,7 @@ public class PlayerMovement : MonoBehaviour
     public float jumpForce;
     public float jumpCooldown;
     public float airMultiplier;
+    public float fallMultiplier;
     bool readyToJump;
 
     //KEYBINDS
@@ -49,6 +50,12 @@ public class PlayerMovement : MonoBehaviour
             rb.drag = groundDrag;
         else
             rb.drag = 0;
+
+        if (rb.velocity.y < 0f)
+        {
+            rb.velocity += Vector3.up * Physics.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
+        }
+
     }
 
     private void FixedUpdate()
