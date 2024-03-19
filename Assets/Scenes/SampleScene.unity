@@ -288,7 +288,7 @@ Camera:
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
-  m_FOVAxisMode: 0
+  m_FOVAxisMode: 1
   m_Iso: 200
   m_ShutterSpeed: 0.005
   m_Aperture: 16
@@ -308,7 +308,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 77.91836
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -533,7 +533,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1343897049}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -570,18 +570,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 799fc7dbbacb8114c8364ffb56e42477, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 7
+  walkSpeed: 5
+  sprintSpeed: 10
   orientation: {fileID: 483090676}
   playerHeight: 2
-  groundDrag: 5
+  groundDrag: 4
   Ground:
     serializedVersion: 2
     m_Bits: 64
   jumpForce: 9
   jumpCooldown: 0.25
-  airMultiplier: 0.4
+  airMultiplier: 1.5
   fallMultiplier: 2
+  crouchSpeed: 3.5
+  crouchYScale: 0.5
   jumpKey: 32
+  sprintKey: 304
+  crouchKey: 306
+  state: 0
 --- !u!54 &1623036629
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -687,7 +693,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0cd706a36e834b548bf797a4a9b098f0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -726,7 +732,7 @@ Transform:
   m_GameObject: {fileID: 1961674698}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: -1.56, z: 0}
-  m_LocalScale: {x: 15.259653, y: 0.36443102, z: 15.259653}
+  m_LocalScale: {x: 21.474909, y: 0.36443102, z: 20.37774}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
