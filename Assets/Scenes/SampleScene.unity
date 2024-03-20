@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 37562822}
   - component: {fileID: 37562821}
   m_Layer: 6
-  m_Name: Cube (2)
+  m_Name: Slope
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -272,7 +272,7 @@ GameObject:
   - component: {fileID: 553043550}
   - component: {fileID: 553043549}
   m_Layer: 6
-  m_Name: Cube (1)
+  m_Name: Crouch barrier
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -471,7 +471,7 @@ GameObject:
   - component: {fileID: 735684683}
   - component: {fileID: 735684682}
   m_Layer: 6
-  m_Name: Cube (3)
+  m_Name: Platform 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -623,7 +623,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 77.91836
+  field of view: 90.06639
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -885,20 +885,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 799fc7dbbacb8114c8364ffb56e42477, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkSpeed: 5
+  walkSpeed: 7
   sprintSpeed: 10
   orientation: {fileID: 483090676}
   playerHeight: 2
-  groundDrag: 4
+  groundDrag: 3
   Ground:
     serializedVersion: 2
     m_Bits: 64
   maxSlopeAngle: 45
-  jumpForce: 6
+  jumpForce: 7
   jumpCooldown: 0.25
-  airMultiplier: 1.5
-  fallMultiplier: 2
-  crouchSpeed: 3.5
+  airMultiplier: 1.2
+  fallMultiplier: 0.75
+  crouchSpeed: 0.5
   crouchYScale: 0.5
   jumpKey: 32
   sprintKey: 304
@@ -913,8 +913,8 @@ Rigidbody:
   m_GameObject: {fileID: 1623036627}
   serializedVersion: 4
   m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
+  m_Drag: 5
+  m_AngularDrag: 1
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -962,7 +962,7 @@ GameObject:
   - component: {fileID: 1961674700}
   - component: {fileID: 1961674699}
   m_Layer: 6
-  m_Name: Cube
+  m_Name: Platform 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

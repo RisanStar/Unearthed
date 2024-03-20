@@ -31,8 +31,6 @@ public class PlayerMovement : MonoBehaviour
     public float jumpCooldown;
     public float airMultiplier;
     public float fallMultiplier;
-    private float coyoteTime = 0.2f;
-    private float coyoteTimeCount;
     bool readyToJump;
 
     //CROUCH VARIABLES
@@ -79,16 +77,11 @@ public class PlayerMovement : MonoBehaviour
         if (grounded)
         {
             rb.drag = groundDrag;
-            coyoteTimeCount = coyoteTime;
         }
         else
-            coyoteTimeCount -= Time.deltaTime;
             rb.drag = 0;
-       
-        if (rb.velocity.y < 0f)
-        {
-            rb.velocity += Vector3.up * Physics.gravity.y * Time.deltaTime;
-        }
+            rb.velocity += Vector3.up * Physics.gravity.y * fallMultiplier * Time.deltaTime;
+        
 
     }
 
@@ -125,7 +118,7 @@ public class PlayerMovement : MonoBehaviour
         vertical = Input.GetAxisRaw("Vertical");
 
         //PLAYER JUMP INPUT
-        if (Input.GetKey(jumpKey) && readyToJump && grounded && coyoteTimeCount > 0f)
+        if (Input.GetKey(jumpKey) && readyToJump && grounded)
         {
             readyToJump = false;
             Jump();
