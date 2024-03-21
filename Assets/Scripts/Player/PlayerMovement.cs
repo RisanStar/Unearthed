@@ -140,11 +140,7 @@ public class PlayerMovement : MonoBehaviour
             //STOP CROUCHING
             transform.localScale = new Vector3(transform.localScale.x, startYScale, transform.localScale.z);
         }
-
-        if ((Input.GetKey(KeyCode.W)) || (Input.GetKey(KeyCode.A)) || (Input.GetKey(KeyCode.S)) || (Input.GetKey(KeyCode.D)))
-        {
-            FindObjectOfType<AudioManager>().Play("Walking");
-        }
+        
     }
 
     private void MovePlayer()
