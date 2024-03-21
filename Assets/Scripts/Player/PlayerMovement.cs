@@ -82,8 +82,6 @@ public class PlayerMovement : MonoBehaviour
         else
             rb.drag = 0;
             rb.velocity += Vector3.up * Physics.gravity.y * fallMultiplier * Time.deltaTime;
-        
-
     }
 
     private void FixedUpdate()
@@ -140,7 +138,7 @@ public class PlayerMovement : MonoBehaviour
             //STOP CROUCHING
             transform.localScale = new Vector3(transform.localScale.x, startYScale, transform.localScale.z);
         }
-        
+
     }
 
     private void MovePlayer()
