@@ -4,14 +4,24 @@ using UnityEngine;
 
 public class Button : MonoBehaviour, IInteractable
 {
-    public GameObject button;
-
-    private void Start()
+    public Renderer button;
+    [SerializeField] private Color newColor;
+    [SerializeField] private Color[] colors;
+    private int colorValue;
+    
+    private void ChangeMaterial()
     {
-       var buttoncolour = button.GetComponent<Renderer>();
+        colorValue++;
+        if(colorValue > 1)
+        {
+            colorValue = 0;
+        }
+
+        button.material.color = colors[colorValue];
+
     }
     public void Interact()
     {
-
+        ChangeMaterial();
     }
 }

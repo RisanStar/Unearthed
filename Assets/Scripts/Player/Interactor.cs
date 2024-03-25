@@ -24,29 +24,34 @@ public class Interactor : MonoBehaviour
         uiPromptButton.SetActive(false);
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
-        //IF THE PLAYER IS PRESSING E SHOOT A RAYCAST IN THAT DIRECTION
+        //FROM THE FRONT OF THE PLAYER SHOOT A RAYCAST IN THAT DIRECTION
             Ray r = new Ray(interactorSource.position, interactorSource.forward);
             if(Physics.Raycast(r, out RaycastHit hitInfo, interactRange))
             {
             //IF IT HITS THE RAY WILL TRY GET AN INTERFACE OF THAT OBJECT
-            if (hitInfo.collider.gameObject.TryGetComponent(out IInteractable interactobj)) 
+            if (hitInfo.collider.gameObject.TryGetComponent(out IInteractable interactobj))
             {
                 uiPromptFirewood.SetActive(true);
                 uiPromptButton.SetActive(true);
             }
+            
             else
             {
                 uiPromptFirewood.SetActive(false);
                 uiPromptButton.SetActive(false);
             }
+            
             //PRESSING THE INTERACTKEY WILL INTERACT WITH THE OBJ
             if (Input.GetKey(interactKey))
             {
                 interactobj.Interact();
+
             }
             
         }
     }
+
+
 }

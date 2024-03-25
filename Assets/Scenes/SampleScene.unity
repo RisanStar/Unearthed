@@ -482,7 +482,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b52ca5759c355940b7792c4c378d3c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  button: {fileID: 0}
+  button: {fileID: 158516985}
+  newColor: {r: 1, g: 0, b: 0, a: 1}
+  colors:
+  - {r: 1, g: 0, b: 0, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &437446719
 GameObject:
   m_ObjectHideFlags: 0
@@ -1086,7 +1090,7 @@ GameObject:
   - component: {fileID: 907863011}
   - component: {fileID: 907863010}
   m_Layer: 5
-  m_Name: 'Canvas '
+  m_Name: 'BCanvas '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1383,7 +1387,7 @@ MonoBehaviour:
   interactorSource: {fileID: 963194228}
   uiPromptFirewood: {fileID: 8554352336378644788}
   uiPromptButton: {fileID: 907863008}
-  interactRange: 20
+  interactRange: 30
   interactKey: 101
 --- !u!1 &1121608327
 GameObject:
@@ -2469,7 +2473,7 @@ GameObject:
   - component: {fileID: 9197716915181464224}
   - component: {fileID: 5806727053338402804}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: FCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
