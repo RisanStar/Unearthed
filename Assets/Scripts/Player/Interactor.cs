@@ -12,43 +12,32 @@ public class Interactor : MonoBehaviour
 {
     //WHERE THE RAYCAST IS CAST FROM
     public Transform interactorSource;
-    [SerializeField] GameObject uiPromptFirewood;
-    [SerializeField] GameObject uiPromptButton;
     public float interactRange;
 
+    //INTERACT KEY
     public KeyCode interactKey = KeyCode.E;
-
-    private void Start()
-    {
-        uiPromptFirewood.SetActive(false);
-        uiPromptButton.SetActive(false);
-    }
 
     private void Update()
     {
-        //FROM THE FRONT OF THE PLAYER SHOOT A RAYCAST IN THAT DIRECTION
+        //FROM THE FRONT OF THE PLAYER SHOOT A RAYCAST IN THAT DIRECTION WHEN PRESSING E
+         if (Input.GetKeyDown(interactKey)) 
+        { 
             Ray r = new Ray(interactorSource.position, interactorSource.forward);
-            if(Physics.Raycast(r, out RaycastHit hitInfo, interactRange))
+            if (Physics.Raycast(r, out RaycastHit hitInfo, interactRange))
             {
-            //IF IT HITS THE RAY WILL TRY GET AN INTERFACE OF THAT OBJECT
-            if (hitInfo.collider.gameObject.TryGetComponent(out IInteractable interactobj))
-            {
-                uiPromptFirewood.SetActive(true);
-                uiPromptButton.SetActive(true);
-            }
-            
-            else
-            {
-                uiPromptFirewood.SetActive(false);
-                uiPromptButton.SetActive(false);
-            }
-            
-            //PRESSING THE INTERACTKEY WILL INTERACT WITH THE OBJ
-            if (Input.GetKey(interactKey))
-            {
-                interactobj.Interact();
+                //IF IT HITS THE RAY WILL TRY GET AN INTERFACE OF THAT OBJECT 
+                if (hitInfo.collider.gameObject.TryGetComponent(out IInteractable interactobj))
+                {
 
+                    interactobj.Interact();
+                }
             }
+            
+          
+
+            
+ 
+           
             
         }
     }
