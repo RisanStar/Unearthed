@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class Button : MonoBehaviour, IInteractable
 {
+    //BUTTON GAMEOBJ AND COLOUR VALUES + RANGE OF INTERACTION
     public Renderer button;
     [SerializeField] private Color newColor;
     [SerializeField] private Color[] colors;
@@ -14,11 +15,13 @@ public class Button : MonoBehaviour, IInteractable
     public float interactRange;
     private void Start()
     {
+        //UI DOESN'T SHOW UNTIL CLOSE
         uiPromptButton.SetActive(false);
     }
 
     private void Update()
     {
+        //IF RAY HITS UI SHOWS UP
         Ray r = new Ray(interactorSource.position, interactorSource.forward);
         if (Physics.Raycast(r, out RaycastHit hitInfo, interactRange))
         {
@@ -32,6 +35,7 @@ public class Button : MonoBehaviour, IInteractable
 
     private void ChangeMaterial()
     {
+        //CHANGES THE COLOUR OF THE BUTTON
         colorValue++;
         if(colorValue > 1)
         {
@@ -43,6 +47,7 @@ public class Button : MonoBehaviour, IInteractable
     }
     public void Interact()
     {
+        //IF THE PLAYER INTERACTS THE BUTTON CHANGES MATERIAL
         ChangeMaterial();
     }
 }

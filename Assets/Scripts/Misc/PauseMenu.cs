@@ -9,6 +9,7 @@ public class PauseMenu : MonoBehaviour
 
     public void Resume()
     {
+        //UNPAUSES THE GAME
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         pauseMenu.SetActive(false);
@@ -17,6 +18,7 @@ public class PauseMenu : MonoBehaviour
 
     public void Home()
     {
+        //GO TO THE HOME SCREEN
         Time.timeScale = 1f;
         SceneManager.LoadScene("MainMenu");
     }
