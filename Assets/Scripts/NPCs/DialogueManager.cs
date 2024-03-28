@@ -5,11 +5,12 @@ using UnityEngine.UI;
 using UnityEngine.Events;
 using TMPro;
 
+
 public class DialogueManager : MonoBehaviour
 {
     //DIALOUGE OPTIONS AND TEXT
-    [SerializeField] private GameObject dialougeParent;
-    [SerializeField] private TMP_Text dialougeText;
+    [SerializeField] private GameObject dialogueParent;
+    [SerializeField] private TMP_Text dialogueText;
 
     [SerializeField] private Button option1Button;
     [SerializeField] private Button option2Button;
@@ -17,7 +18,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private Button option4Button;
 
     //TYPING AND TURN SPEED
-    [SerializeField] private float typingSpeeed = .05f;
+    [SerializeField] private float typingSpeed = .05f;
     [SerializeField] private float turnSpeed = 2f;
 
     //REFRENCE OF THE LIST OF DIALOUGE 
@@ -28,17 +29,18 @@ public class DialogueManager : MonoBehaviour
     private Transform playerCamera;
 
     //ALLOWS FOR OPTIONS
-    private int currentDialougeIndex = 0;
+    private int currentDialogueIndex = 0;
 
     private void Start()
     {
-       dialougeParent.SetActive(false);
+       dialogueParent.SetActive(false);
        playerCamera = Camera.main.transform;
+       
     }
 
     private void DialougeStart(List<dialogueString> textToPrint, Transform NPC)
     {
-        dialougeParent.SetActive(true);
+        dialogueParent.SetActive(true);
         playerMovement.enabled = false;
 
         Cursor.lockState = CursorLockMode.None;
@@ -47,25 +49,26 @@ public class DialogueManager : MonoBehaviour
         StartCoroutine(TurnCameraTowardsNPC());
 
         dialogueList = textToPrint;
-        currentDialougeIndex = 0;
+        currentDialogueIndex = 0;
 
         DisableButtons();
 
-        StartCoroutine(printDialogue());
+        StartCoroutine(PrintDialogue());
 
     }
 
     private void DisableButtons()
     {
-        option1Button.interactable = false;
-        option2Button.interactable = false;
-        option3Button.interactable = false;
-        option4Button.interactable = false;
+        option1Button.enabled = false;
+        option2Button.enabled = false;
+        option3Button.enabled = false;
+        option4Button.enabled = false;
 
         option1Button.GetComponentInChildren<TMP_Text>().text = "No Option";
         option2Button.GetComponentInChildren<TMP_Text>().text = "No Option";
         option3Button.GetComponentInChildren<TMP_Text>().text = "No Option";
         option4Button.GetComponentInChildren<TMP_Text>().text = "No Option";
+
     }
 
     private IEnumerator TurnCameraTowardsNPC(Transform NPC)
@@ -82,4 +85,67 @@ public class DialogueManager : MonoBehaviour
         }
         playerCamera.rotation = targetrotation;
     }
+
+    private bool optionSelected = false;
+    private IEnumerator PrintDialogue()
+    {
+        while(currentDialogueIndex < dialogueList.Count)
+        {
+            dialogueString line = dialogueList[currentDialogueIndex];
+
+            line.startDialogueEvent?.Invoke();
+            if (line.isQuestion)
+            {
+                yield return StartCoroutine(TypeText(line.text));
+                option1Button.enabled = true;
+                option2Button.enabled = true;
+                option3Button.enabled = true;
+                option4Button.enabled = true;
+
+                option1Button.GetComponentInChildren<TMP_Text>().text = line.answerOption1;
+                option2Button.GetComponentInChildren<TMP_Text>().text = line.answerOption2;
+                option3Button.GetComponentInChildren<TMP_Text>().text = line.answerOption3;
+                option4Button.GetComponentInChildren<TMP_Text>().text = line.answerOption4;
+
+                option1Button.onClick.AddListener(() => HandleOptionSelected(line.option1Index));
+                option2Button.onClick.AddListener(() => HandleOptionSelected(line.option2Index));
+                option3Button.onClick.AddListener(() => HandleOptionSelected(line.option3Index));
+                option4Button.onClick.AddListener(() => HandleOptionSelected(line.option4Index));
+
+                yield return new WaitUntil(() => optionSelected);
+            }
+            else
+            {
+                yield return StartCoroutine(TypeText(line.text));
+            }
+            line.endDialogueEvent?.Invoke();
+            optionSelected = false;
+        }
+
+        DialogueStop();
+    }
+
+    private void HandleOptionSelected(int indexJump)
+    {
+        optionSelected = true;
+        DisableButtons();
+
+        currentDialogueIndex = indexJump;
+    }
+
+    private IEnumerator typeText(string text)
+    {
+        dialogueText.text = "";
+        foreach (char letter in text.ToCharArray())
+        {
+            dialogueText.text += letter;
+            yield return new WaitForSeconds(typingSpeed);
+        }
+
+        if (!dialogueList[currentDialogueIndex].isQuestion)
+        {
+            yield return new WaitUntil(() => Input.GetMouseButtonDown(0));
+        }
+    }
+            
 }

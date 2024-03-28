@@ -26,12 +26,13 @@ public class dialogueString
 }
 public class DialougePrompt : MonoBehaviour, IInteractable
 {
+    
     [SerializeField] private List<dialogueString> dialogueStrings = new List<dialogueString>();
     [SerializeField] private Transform NPCTransform;
 
     private bool hasSpoken = false;
 
-    private void StartDialouge()
+    private void StartDialogue()
     {
         if (!hasSpoken)
         {
@@ -42,6 +43,7 @@ public class DialougePrompt : MonoBehaviour, IInteractable
 
     public void Interact()
     {
-        StartDialouge();
+        StartDialogue();
     }
+    
 }

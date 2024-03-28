@@ -13,6 +13,8 @@ public class Button : MonoBehaviour, IInteractable
     public Transform interactorSource;
     [SerializeField] GameObject uiPromptButton;
     public float interactRange;
+    internal object onClick;
+
     private void Start()
     {
         //UI DOESN'T SHOW UNTIL CLOSE
