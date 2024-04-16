@@ -6,7 +6,6 @@ using UnityEngine.Events;
 using TMPro;
 
 
-
 public class DialogueManager : MonoBehaviour
 {
     //DIALOUGE OPTIONS AND TEXT
@@ -100,12 +99,14 @@ public class DialogueManager : MonoBehaviour
 
                 option1Button.GetComponentInChildren<TMP_Text>().text = line.answerOption1;
                 option2Button.GetComponentInChildren<TMP_Text>().text = line.answerOption2;
+
+                HandleOptionSelected(line.option1Index);
+                HandleOptionSelected(line.option2Index);
                 
                 yield return new WaitUntil(() => optionSelected);
 
+
        
-                HandleOptionSelected(line.option1Index);
-                HandleOptionSelected(line.option2Index);
             }
             else
             {
@@ -119,7 +120,7 @@ public class DialogueManager : MonoBehaviour
         DialogueStop();
     }
     
-    private void HandleOptionSelected(int indexJump)
+    public void HandleOptionSelected(int indexJump)
     {
         optionSelected = false;
         DisableButtons();
