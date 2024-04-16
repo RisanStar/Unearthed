@@ -14,12 +14,10 @@ public class dialogueString
 
     public string answerOption1;
     public string answerOption2;
-    public string answerOption3;
-    public string answerOption4;
+
     public int option1Index;
     public int option2Index;    
-    public int option3Index;
-    public int option4Index;
+
 
     public UnityEvent startDialogueEvent;
     public UnityEvent endDialogueEvent;
@@ -31,7 +29,7 @@ public class DialougePrompt : MonoBehaviour, IInteractable
     [SerializeField] private Transform NPCTransform;
 
     private bool hasSpoken = false;
-
+    
     private void StartDialogue()
     {
         if (!hasSpoken)
@@ -40,10 +38,10 @@ public class DialougePrompt : MonoBehaviour, IInteractable
             hasSpoken = true;
         }
     }
-
+    
     public void Interact()
     {
-        StartDialogue();
+       StartDialogue();
     }
     
 }

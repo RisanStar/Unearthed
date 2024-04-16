@@ -6,6 +6,7 @@ using UnityEngine.Events;
 using TMPro;
 
 
+
 public class DialogueManager : MonoBehaviour
 {
     //DIALOUGE OPTIONS AND TEXT
@@ -14,8 +15,6 @@ public class DialogueManager : MonoBehaviour
 
     [SerializeField] private Button option1Button;
     [SerializeField] private Button option2Button;
-    [SerializeField] private Button option3Button;
-    [SerializeField] private Button option4Button;
 
     //TYPING AND TURN SPEED
     [SerializeField] private float typingSpeed = .05f;
@@ -31,14 +30,15 @@ public class DialogueManager : MonoBehaviour
     //ALLOWS FOR OPTIONS
     private int currentDialogueIndex = 0;
 
+
     private void Start()
     {
        dialogueParent.SetActive(false);
        playerCamera = Camera.main.transform;
-       
+
     }
 
-    private void DialougeStart(List<dialogueString> textToPrint, Transform NPC)
+    public void DialogueStart(List<dialogueString> textToPrint, Transform NPC)
     {
         dialogueParent.SetActive(true);
         playerMovement.enabled = false;
@@ -46,7 +46,7 @@ public class DialogueManager : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
 
-        StartCoroutine(TurnCameraTowardsNPC());
+        StartCoroutine(TurnCameraTowardsNPC(NPC));
 
         dialogueList = textToPrint;
         currentDialogueIndex = 0;
@@ -61,13 +61,10 @@ public class DialogueManager : MonoBehaviour
     {
         option1Button.enabled = false;
         option2Button.enabled = false;
-        option3Button.enabled = false;
-        option4Button.enabled = false;
 
         option1Button.GetComponentInChildren<TMP_Text>().text = "No Option";
         option2Button.GetComponentInChildren<TMP_Text>().text = "No Option";
-        option3Button.GetComponentInChildren<TMP_Text>().text = "No Option";
-        option4Button.GetComponentInChildren<TMP_Text>().text = "No Option";
+ 
 
     }
 
@@ -87,6 +84,7 @@ public class DialogueManager : MonoBehaviour
     }
 
     private bool optionSelected = false;
+    
     private IEnumerator PrintDialogue()
     {
         while(currentDialogueIndex < dialogueList.Count)
@@ -99,41 +97,37 @@ public class DialogueManager : MonoBehaviour
                 yield return StartCoroutine(TypeText(line.text));
                 option1Button.enabled = true;
                 option2Button.enabled = true;
-                option3Button.enabled = true;
-                option4Button.enabled = true;
 
                 option1Button.GetComponentInChildren<TMP_Text>().text = line.answerOption1;
                 option2Button.GetComponentInChildren<TMP_Text>().text = line.answerOption2;
-                option3Button.GetComponentInChildren<TMP_Text>().text = line.answerOption3;
-                option4Button.GetComponentInChildren<TMP_Text>().text = line.answerOption4;
-
-                option1Button.onClick.AddListener(() => HandleOptionSelected(line.option1Index));
-                option2Button.onClick.AddListener(() => HandleOptionSelected(line.option2Index));
-                option3Button.onClick.AddListener(() => HandleOptionSelected(line.option3Index));
-                option4Button.onClick.AddListener(() => HandleOptionSelected(line.option4Index));
-
+                
                 yield return new WaitUntil(() => optionSelected);
+
+       
+                HandleOptionSelected(line.option1Index);
+                HandleOptionSelected(line.option2Index);
             }
             else
             {
                 yield return StartCoroutine(TypeText(line.text));
             }
+
             line.endDialogueEvent?.Invoke();
             optionSelected = false;
         }
 
         DialogueStop();
     }
-
+    
     private void HandleOptionSelected(int indexJump)
     {
-        optionSelected = true;
+        optionSelected = false;
         DisableButtons();
 
         currentDialogueIndex = indexJump;
     }
 
-    private IEnumerator typeText(string text)
+    private IEnumerator TypeText(string text)
     {
         dialogueText.text = "";
         foreach (char letter in text.ToCharArray())
@@ -146,6 +140,18 @@ public class DialogueManager : MonoBehaviour
         {
             yield return new WaitUntil(() => Input.GetMouseButtonDown(0));
         }
+    }
+
+    private void DialogueStop()
+    {
+        StopAllCoroutines();
+        dialogueText.text = "";
+        dialogueParent.SetActive(false);
+
+        playerMovement.enabled = true;
+
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
             
 }
