@@ -13,7 +13,7 @@ public class Wire : MonoBehaviour
 
     private void OnMouseDrag()
     {
-        Vector3 newPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector3 newPosition = Camera.main.ScreenToViewportPoint(Input.mousePosition);
         newPosition.z = 0;
 
         transform.position = newPosition;

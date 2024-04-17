@@ -40,7 +40,7 @@ public class Puzzle1 : MonoBehaviour, IInteractable
     private void WirePuzzle()
     {
         wirePuzzle.SetActive(true);
-        Cursor.lockState = CursorLockMode.None;
+        Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = true;
     }
 
