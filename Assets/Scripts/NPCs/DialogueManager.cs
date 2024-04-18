@@ -4,7 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
 using TMPro;
-
+using UnityEngine.UIElements;
+using UnityEditor.UI;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -12,8 +13,8 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private GameObject dialogueParent;
     [SerializeField] private TMP_Text dialogueText;
 
-    [SerializeField] private Button option1Button;
-    [SerializeField] private Button option2Button;
+    private Button option1Button;
+    private Button option2Button;
 
     //TYPING AND TURN SPEED
     [SerializeField] private float typingSpeed = .05f;
@@ -42,8 +43,8 @@ public class DialogueManager : MonoBehaviour
         dialogueParent.SetActive(true);
         playerMovement.enabled = false;
 
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
+        UnityEngine.Cursor.lockState = CursorLockMode.None;
+        UnityEngine.Cursor.visible = true;
 
         StartCoroutine(TurnCameraTowardsNPC(NPC));
 
@@ -151,8 +152,8 @@ public class DialogueManager : MonoBehaviour
 
         playerMovement.enabled = true;
 
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        UnityEngine.Cursor.lockState = CursorLockMode.Locked;
+        UnityEngine.Cursor.visible = false;
     }
             
 }

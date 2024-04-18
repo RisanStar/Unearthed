@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Puzzle1 : MonoBehaviour, IInteractable
 {
@@ -42,6 +43,7 @@ public class Puzzle1 : MonoBehaviour, IInteractable
         wirePuzzle.SetActive(true);
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = true;
+        SceneManager.LoadScene("WirePuzzle");
     }
 
     public void Interact()
