@@ -27,7 +27,7 @@ public class Wire : MonoBehaviour
             if (collider.gameObject != gameObject)
             {
                 UpdateWire(collider.transform.position);
-                if (transform.parent.name.Equals(collider.gameObject.name))
+                if (transform.parent.name.Equals(collider.transform.parent.name))
                 {
                     collider.GetComponent<Wire>()?.Done();
                     Done();

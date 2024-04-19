@@ -10,6 +10,8 @@ public class Puzzle1 : MonoBehaviour, IInteractable
     [SerializeField] GameObject uiPromptButton;
     public float interactRange;
 
+    public int level = 1;
+
 
     private void Start()
     {
@@ -28,14 +30,6 @@ public class Puzzle1 : MonoBehaviour, IInteractable
         {
             uiPromptButton.SetActive(false);
         }
-
-        if (Input.GetKeyDown(KeyCode.W) || (Input.GetKeyDown(KeyCode.A) || (Input.GetKeyDown(KeyCode.S) || (Input.GetKeyDown(KeyCode.D)))))
-        {
-            wirePuzzle.SetActive(false);
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
-        }
-
     }
   
     private void WirePuzzle()
@@ -46,8 +40,25 @@ public class Puzzle1 : MonoBehaviour, IInteractable
         SceneManager.LoadScene("WirePuzzle");
     }
 
+    public void SavePlayer()
+    {
+        SavePosition.SavePlayer(this);
+    }
+    public void LoadPlayer()
+    {
+        PlayerData data = SavePosition.LoadPlayer();
+
+        level = data.level;
+
+        Vector3 position;
+        position.x = data.position[0];
+        position.y = data.position[1];
+        position.z = data.position[2];
+    }
+
     public void Interact()
     {
         WirePuzzle();
+        SavePlayer();
     }
 }
