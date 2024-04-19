@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/WirePuzzle.unity
     guid: 5479b0aca26c1394ca5f96902074721e
+  - enabled: 1
+    path: Assets/Scenes/AlienTower.unity
+    guid: 16ee161a814ebfb46bac4cea5b191f7b
   m_configObjects: {}
