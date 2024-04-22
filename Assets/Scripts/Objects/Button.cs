@@ -21,11 +21,11 @@ public class Button : MonoBehaviour, IInteractable
         uiPromptButton.SetActive(false);
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         //IF RAY HITS UI SHOWS UP
-        Ray r = new Ray(interactorSource.position, interactorSource.forward);
-        if (Physics.Raycast(r, out RaycastHit hitInfo, interactRange))
+        Ray r = new (interactorSource.position, interactorSource.forward);
+        if (Physics.Raycast(r, interactRange))
         {
             uiPromptButton.SetActive(true);
         }

@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/AlienTower.unity
     guid: 16ee161a814ebfb46bac4cea5b191f7b
+  - enabled: 1
+    path: Assets/Scenes/FlashBack.unity
+    guid: 6d2c927819c65e0448b5195a69945990
   m_configObjects: {}

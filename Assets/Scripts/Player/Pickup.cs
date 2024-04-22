@@ -17,11 +17,11 @@ public class Pickup : MonoBehaviour, IInteractable
         uiPromptFirewood.SetActive(false);
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         //IF RAY HITS OBJ THE UI SHOWS UP
-        Ray r = new Ray(interactorSource.position, interactorSource.forward);
-        if (Physics.Raycast(r, out RaycastHit hitInfo, interactRange))
+        Ray r = new (interactorSource.position, interactorSource.forward);
+        if (Physics.Raycast(r,interactRange))
         {
             uiPromptFirewood.SetActive(true);
         }
