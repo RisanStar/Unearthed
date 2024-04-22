@@ -29,6 +29,7 @@ public class OldMan : MonoBehaviour, IInteractable
     }
     private void FlashBack()
     {
+        
         SceneManager.LoadScene("FlashBack");
 
     }
