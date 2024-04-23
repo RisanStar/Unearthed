@@ -14,6 +14,7 @@ public class DialogueManager : MonoBehaviour
 
     public Button option1Button;
     public Button option2Button;
+    public GameObject options;
 
     //TYPING AND TURN SPEED
     [SerializeField] private float typingSpeed = .05f;
@@ -34,6 +35,7 @@ public class DialogueManager : MonoBehaviour
     {
        dialogueParent.SetActive(false);
        playerCamera = Camera.main.transform;
+       options.SetActive(false);
     }
 
     public void DialogueStart(List<dialogueString> textToPrint, Transform NPC)
@@ -41,6 +43,7 @@ public class DialogueManager : MonoBehaviour
         //MOVES THE CAM TOWARDS NPC TO PREPARE FOR DIALOGUE
         dialogueParent.SetActive(true);
         playerMovement.enabled = false;
+        options.SetActive(true);
 
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
@@ -152,6 +155,7 @@ public class DialogueManager : MonoBehaviour
         dialogueParent.SetActive(false);
 
         playerMovement.enabled = true;
+        
 
        Cursor.lockState = CursorLockMode.Locked;
        Cursor.visible = false;
