@@ -171,18 +171,18 @@ MonoBehaviour:
   dialogueStrings:
   - text: HI
     isEnd: 0
-    isQuestion: 0
-    answerOption1: 
-    answerOption2: 
-    option1Index: 0
-    option2Index: 0
+    isQuestion: 1
+    answerOption1: yo
+    answerOption2: ...
+    option1Index: 1
+    option2Index: 1
     startDialogueEvent:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 38876444}
-          m_TargetAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_MethodName: 
-          m_Mode: 1
+        - m_Target: {fileID: 38876447}
+          m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
+          m_MethodName: HandleOptionSelected
+          m_Mode: 3
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -194,10 +194,47 @@ MonoBehaviour:
     endDialogueEvent:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 38876444}
-          m_TargetAssemblyTypeName: UnityEngine.MonoBehaviour, UnityEngine
-          m_MethodName: StopAllCoroutines
-          m_Mode: 1
+        - m_Target: {fileID: 38876447}
+          m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
+          m_MethodName: HandleOptionSelected
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - text: shh
+    isEnd: 1
+    isQuestion: 0
+    answerOption1: yo
+    answerOption2: ...
+    option1Index: 2
+    option2Index: 2
+    startDialogueEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 38876447}
+          m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
+          m_MethodName: HandleOptionSelected
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    endDialogueEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 38876447}
+          m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
+          m_MethodName: HandleOptionSelected
+          m_Mode: 3
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -207,6 +244,25 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
   NPCTransform: {fileID: 38876440}
+--- !u!114 &38876447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 38876439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a025151ad0691344ad269eca95b704d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueParent: {fileID: 973166019}
+  dialogueText: {fileID: 195814565}
+  option1Button: {fileID: 1020289960}
+  option2Button: {fileID: 1332607073}
+  typingSpeed: 0.05
+  turnSpeed: 2
+  playerMovement: {fileID: 1623036628}
 --- !u!4 &44155145 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 09f59ac3164560648af8ebf1616170ee, type: 3}
@@ -2028,7 +2084,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -250}
+  m_AnchoredPosition: {x: 0, y: 275}
   m_SizeDelta: {x: 900, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &395268124
@@ -3096,7 +3152,7 @@ RectTransform:
   m_GameObject: {fileID: 653582988}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 0.01}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 854513466}
@@ -4478,7 +4534,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &973166020
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4705,10 +4761,10 @@ RectTransform:
   m_Father: {fileID: 1669697645}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 157.5, y: -50}
-  m_SizeDelta: {x: 280, y: 35}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1020289958
 MonoBehaviour:
@@ -5133,7 +5189,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1083713782
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5562,6 +5618,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1162061151}
   - component: {fileID: 1162061152}
+  - component: {fileID: 1162061153}
   m_Layer: 0
   m_Name: MiniMapCamera
   m_TagString: Untagged
@@ -5635,6 +5692,19 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!114 &1162061153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1162061150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e47c1272a09b88f469340facfc45b225, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 483090676}
 --- !u!1 &1198794998
 GameObject:
   m_ObjectHideFlags: 0
@@ -5897,7 +5967,7 @@ RectTransform:
   m_GameObject: {fileID: 1262878088}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 854513466}
@@ -6286,10 +6356,10 @@ RectTransform:
   m_Father: {fileID: 1669697645}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 442.5, y: -50}
-  m_SizeDelta: {x: 280, y: 35}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1332607073
 MonoBehaviour:
@@ -7344,7 +7414,6 @@ GameObject:
   - component: {fileID: 1623036631}
   - component: {fileID: 1623036632}
   - component: {fileID: 1623036633}
-  - component: {fileID: 1623036634}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -7466,23 +7535,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 333420b6993ea4042b3c3abfdf7a822d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1623036634
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1623036627}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a025151ad0691344ad269eca95b704d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogueParent: {fileID: 973166019}
-  dialogueText: {fileID: 195814565}
-  typingSpeed: 0.05
-  turnSpeed: 2
-  playerMovement: {fileID: 1623036628}
 --- !u!1 &1625806306
 GameObject:
   m_ObjectHideFlags: 0
@@ -7510,7 +7562,7 @@ RectTransform:
   m_GameObject: {fileID: 1625806306}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 0.01}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 854513466}
@@ -8071,7 +8123,7 @@ RectTransform:
   m_GameObject: {fileID: 1828214657}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 854513466}
@@ -8465,6 +8517,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f689cd19a1eea8b4d82ea9858f9ce56f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 38876444}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f689cd19a1eea8b4d82ea9858f9ce56f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 38876447}
   m_SourcePrefab: {fileID: 100100000, guid: f689cd19a1eea8b4d82ea9858f9ce56f, type: 3}
 --- !u!1 &1939532792
 GameObject:

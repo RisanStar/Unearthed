@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Button : MonoBehaviour, IInteractable
+public class ActivateButton : MonoBehaviour, IInteractable
 {
     //BUTTON GAMEOBJ AND COLOUR VALUES + RANGE OF INTERACTION
     public Renderer button;

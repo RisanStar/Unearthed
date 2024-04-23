@@ -11,6 +11,8 @@ public class CameraMovement : MonoBehaviour
     float yRotation;
     public Transform orientation;
 
+    
+
     private void Start()
     {
         //CURSOR 
@@ -19,18 +21,21 @@ public class CameraMovement : MonoBehaviour
     }
     private void Update()
     {
-        //MOUSE INPUT
-        float mouseX = Input.GetAxisRaw("Mouse X") * Time.deltaTime * sensX;
-        float mouseY = Input.GetAxisRaw("Mouse Y") * Time.deltaTime * sensY;
+     
+     
+            //MOUSE INPUT
+            float mouseX = Input.GetAxisRaw("Mouse X") * Time.deltaTime * sensX;
+            float mouseY = Input.GetAxisRaw("Mouse Y") * Time.deltaTime * sensY;
 
-        //CAMERA ROTATION AND ORIENTATION
-        yRotation += mouseX;
-        xRotation -= mouseY;
-        xRotation = Mathf.Clamp(xRotation, -90f, 90f);
+            //CAMERA ROTATION AND ORIENTATION
+            yRotation += mouseX;
+            xRotation -= mouseY;
+            xRotation = Mathf.Clamp(xRotation, -90f, 90f);
 
 
-        transform.rotation = Quaternion.Euler(xRotation, yRotation, 0);
-        orientation.rotation = Quaternion.Euler(0, yRotation, 0);
+            transform.rotation = Quaternion.Euler(xRotation, yRotation, 0);
+            orientation.rotation = Quaternion.Euler(0, yRotation, 0);
+     
     }
 
 }

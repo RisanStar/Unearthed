@@ -4,8 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
 using TMPro;
-using UnityEngine.UIElements;
-using UnityEditor.UI;
+
 
 public class DialogueManager : MonoBehaviour
 {
@@ -13,8 +12,8 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private GameObject dialogueParent;
     [SerializeField] private TMP_Text dialogueText;
 
-    private Button option1Button;
-    private Button option2Button;
+    public Button option1Button;
+    public Button option2Button;
 
     //TYPING AND TURN SPEED
     [SerializeField] private float typingSpeed = .05f;
@@ -35,16 +34,16 @@ public class DialogueManager : MonoBehaviour
     {
        dialogueParent.SetActive(false);
        playerCamera = Camera.main.transform;
-
     }
 
     public void DialogueStart(List<dialogueString> textToPrint, Transform NPC)
     {
+        //MOVES THE CAM TOWARDS NPC TO PREPARE FOR DIALOGUE
         dialogueParent.SetActive(true);
         playerMovement.enabled = false;
 
-        UnityEngine.Cursor.lockState = CursorLockMode.None;
-        UnityEngine.Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
 
         StartCoroutine(TurnCameraTowardsNPC(NPC));
 
@@ -59,8 +58,9 @@ public class DialogueManager : MonoBehaviour
 
     private void DisableButtons()
     {
-        option1Button.enabled = false;
-        option2Button.enabled = false;
+        //WHEN WAITING TO FEED OPTIONS AND READ TEXT
+        option1Button.interactable = false;
+        option2Button.interactable = false;
 
         option1Button.GetComponentInChildren<TMP_Text>().text = "No Option";
         option2Button.GetComponentInChildren<TMP_Text>().text = "No Option";
@@ -70,6 +70,7 @@ public class DialogueManager : MonoBehaviour
 
     private IEnumerator TurnCameraTowardsNPC(Transform NPC)
     {
+        //CAMERA LOCKS TO NPC
         Quaternion startRotation = playerCamera.rotation;
         Quaternion targetrotation = Quaternion.LookRotation(NPC.position - playerCamera.position);
 
@@ -95,14 +96,14 @@ public class DialogueManager : MonoBehaviour
             if (line.isQuestion)
             {
                 yield return StartCoroutine(TypeText(line.text));
-                option1Button.enabled = true;
-                option2Button.enabled = true;
+                option1Button.interactable = true;
+                option2Button.interactable = true;
 
                 option1Button.GetComponentInChildren<TMP_Text>().text = line.answerOption1;
                 option2Button.GetComponentInChildren<TMP_Text>().text = line.answerOption2;
 
-                HandleOptionSelected(line.option1Index);
-                HandleOptionSelected(line.option2Index);
+                option1Button.onClick.AddListener(() => HandleOptionSelected(line.option1Index));
+                option2Button.onClick.AddListener(() => HandleOptionSelected(line.option2Index));
                 
                 yield return new WaitUntil(() => optionSelected);
 
@@ -152,8 +153,8 @@ public class DialogueManager : MonoBehaviour
 
         playerMovement.enabled = true;
 
-        UnityEngine.Cursor.lockState = CursorLockMode.Locked;
-        UnityEngine.Cursor.visible = false;
+       Cursor.lockState = CursorLockMode.Locked;
+       Cursor.visible = false;
     }
             
 }
