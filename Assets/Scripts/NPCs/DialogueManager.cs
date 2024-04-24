@@ -91,7 +91,7 @@ public class DialogueManager : MonoBehaviour
     
     private IEnumerator PrintDialogue()
     {
-        while(currentDialogueIndex < dialogueList.Count)
+        while (currentDialogueIndex < dialogueList.Count)
         {
             dialogueString line = dialogueList[currentDialogueIndex];
 
@@ -148,13 +148,14 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    private void DialogueStop()
+    public void DialogueStop()
     {
         StopAllCoroutines();
         dialogueText.text = "";
         dialogueParent.SetActive(false);
 
         playerMovement.enabled = true;
+        options.SetActive(false);
         
 
        Cursor.lockState = CursorLockMode.Locked;
