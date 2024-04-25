@@ -22,7 +22,7 @@ public class Interactor : MonoBehaviour
         //FROM THE FRONT OF THE PLAYER SHOOT A RAYCAST IN THAT DIRECTION WHEN PRESSING E
          if (Input.GetKeyDown(interactKey)) 
         { 
-            Ray r = new Ray(interactorSource.position, interactorSource.forward);
+            Ray r = new (interactorSource.position, interactorSource.forward);
             if (Physics.Raycast(r, out RaycastHit hitInfo, interactRange))
             {
                 //IF IT HITS THE RAY WILL TRY GET AN INTERFACE OF THAT OBJECT 

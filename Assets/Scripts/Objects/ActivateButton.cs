@@ -7,12 +7,15 @@ public class ActivateButton : MonoBehaviour, IInteractable
 {
     //BUTTON GAMEOBJ AND COLOUR VALUES + RANGE OF INTERACTION
     public Renderer button;
+
     [SerializeField] private Color newColor;
     [SerializeField] private Color[] colors;
     private int colorValue;
-    public Transform interactorSource;
+
+    [SerializeField] Transform interactorSource;
+    [SerializeField] float interactRange;
     [SerializeField] GameObject uiPromptButton;
-    public float interactRange;
+
     internal object onClick;
 
     private void Start()

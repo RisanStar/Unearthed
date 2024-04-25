@@ -86,6 +86,11 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (Dialogue.GetInstance().dialogueIsPlaying)
+        {
+            return;
+        }
+
         //CALLING PLAYER MOVEMENT
         MovePlayer();
     }
@@ -117,7 +122,7 @@ public class PlayerMovement : MonoBehaviour
         vertical = Input.GetAxisRaw("Vertical");
 
         //PLAYER JUMP INPUT
-        if (Input.GetKey(jumpKey) && readyToJump && grounded)
+        if (Input.GetKey(jumpKey) && readyToJump && grounded && !Dialogue.GetInstance().dialogueIsPlaying)
         {
             readyToJump = false;
             Jump();

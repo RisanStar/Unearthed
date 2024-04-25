@@ -11,9 +11,12 @@ public class Dialogue : MonoBehaviour
     [SerializeField] private GameObject dialogueUI;
     [SerializeField] private TextMeshProUGUI dialogueText;
 
+    [SerializeField] private GameObject[] choices;
+    private TextMeshProUGUI[] choicesText;
+
     private Story currentStory;
 
-    private bool dialogueIsPlaying;
+    public bool dialogueIsPlaying { get; private set; }
 
     private void Awake()
     {
@@ -29,10 +32,19 @@ public class Dialogue : MonoBehaviour
         return instance;
     }
 
+
     private void Start()
     {
         dialogueIsPlaying = false;
         dialogueUI.SetActive(false);
+
+        choicesText = new TextMeshProUGUI[choices.Length];
+        int index = 0;
+        foreach (GameObject choice in choices)
+        {
+            choicesText[index] = choice.GetComponentInChildren<TextMeshProUGUI>();
+            index++;
+        }
     }
 
     private void Update()
@@ -42,7 +54,7 @@ public class Dialogue : MonoBehaviour
             return; 
         }
 
-        if (Input.GetButtonDown("E"))
+        if (Input.GetMouseButtonDown(0)) 
         {
             ContinueStory();
         }
@@ -65,14 +77,25 @@ public class Dialogue : MonoBehaviour
         }
         else
         {
-            ExitDialogueMode();
+            StartCoroutine(ExitDialogueMode());
         }
     }
 
-    private void ExitDialogueMode()
+    private IEnumerator ExitDialogueMode()
     {
+        yield return new WaitForSeconds(.1f);
+
         dialogueIsPlaying = false;
         dialogueUI.SetActive(false);
         dialogueText.text = "";
+    }
+
+    private void DisplayChoices()
+    {
+        List<Choice> currentChoices = currentStory.currentChoices;
+        if (currentChoices.Count > choices.Length)
+        {
+            Debug.LogError("More Choices Given Than The Ui Can Support");
+        }
     }
 }
