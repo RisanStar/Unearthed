@@ -1,12 +1,16 @@
+INCLUDE ../Globals.ink
+
+
 -> Main
 === Main ===
 May you fix my house wires?
   * [Yes]
-     ty
-     -> END
+     ~ playPuzzle("puzzle1")
+     ty #answer: Yes
+     -> Task
   * [No]
-     ...
-     -> END
-   
+     ... #answer: No
+     -> Task
+     
+=== Task ===
 -> END
-

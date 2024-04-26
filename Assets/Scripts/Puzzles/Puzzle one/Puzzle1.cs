@@ -1,3 +1,4 @@
+using Ink.Runtime;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -58,7 +59,8 @@ public class Puzzle1 : MonoBehaviour, IInteractable
 
     public void Interact()
     {
-        WirePuzzle();
-        SavePlayer();
+            WirePuzzle();
+            SavePlayer();
+        
     }
 }

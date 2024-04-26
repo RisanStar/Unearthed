@@ -170,10 +170,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueUI: {fileID: 973166019}
   dialogueText: {fileID: 195814565}
+  trigger: {fileID: 38876443}
   typingSpeed: 0.05
   choices:
   - {fileID: 332562454}
   - {fileID: 1311466417}
+  choice0: {fileID: 332562456}
+  choice1: {fileID: 1311466419}
   continueKey: 101
 --- !u!114 &38876443
 MonoBehaviour:

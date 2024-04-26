@@ -12,9 +12,12 @@ public class Dialogue : MonoBehaviour
 
     [SerializeField] private GameObject dialogueUI;
     [SerializeField] private TextMeshProUGUI dialogueText;
-    [SerializeField] private float typingSpeed = .05f;
+    [SerializeField] private DialogueTrigger trigger;
+    [SerializeField] private float typingSpeed = 1f;
 
     [SerializeField] private GameObject[] choices;
+    public Button choice0;
+    public Button choice1;
     private TextMeshProUGUI[] choicesText;
 
     private Story currentStory;
@@ -43,6 +46,7 @@ public class Dialogue : MonoBehaviour
         dialogueIsPlaying = false;
         dialogueUI.SetActive(false);
 
+
         choicesText = new TextMeshProUGUI[choices.Length];
         int index = 0;
         foreach (GameObject choice in choices)
@@ -59,7 +63,7 @@ public class Dialogue : MonoBehaviour
             return; 
         }
 
-        if (Input.GetKeyDown(continueKey)) 
+        if (currentStory.currentChoices.Count == 0 && Input.GetKeyDown(continueKey)) 
         {
             StartCoroutine(ContinueStory());
         }
@@ -68,10 +72,14 @@ public class Dialogue : MonoBehaviour
     public void EnterDialogueMode(TextAsset ink)
     {
         currentStory = new Story(ink.text);
+
         dialogueIsPlaying = true;
         dialogueUI.SetActive(true);
+
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+
+        
 
         StartCoroutine(ContinueStory());
     }
@@ -81,13 +89,18 @@ public class Dialogue : MonoBehaviour
         if (currentStory.canContinue)
         {
             dialogueText.text = currentStory.Continue();
-            yield return StartCoroutine(TypeText(dialogueText.text));
             DisplayChoices();
+            choice0.interactable = false;
+            choice1.interactable = false;
+            yield return StartCoroutine(TypeText(dialogueText.text));
+            choice0.interactable = true;
+            choice1.interactable = true;
 
         }
         else
         {
             StartCoroutine(ExitDialogueMode());
+          
         }
     }
 
@@ -97,7 +110,7 @@ public class Dialogue : MonoBehaviour
 
         dialogueIsPlaying = false;
         dialogueUI.SetActive(false);
-
+    
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
 
@@ -151,6 +164,7 @@ public class Dialogue : MonoBehaviour
     public void MakeChoice(int choiceIndex)
     {
       currentStory.ChooseChoiceIndex(choiceIndex);
+        StartCoroutine(ContinueStory());
        
     }
 }
