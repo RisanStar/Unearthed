@@ -170,6 +170,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueUI: {fileID: 973166019}
   dialogueText: {fileID: 195814565}
+  typingSpeed: 0.05
   choices:
   - {fileID: 332562454}
   - {fileID: 1311466417}

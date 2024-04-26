@@ -4,6 +4,7 @@ using TMPro;
 using UnityEngine;
 using Ink.Runtime;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class Dialogue : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class Dialogue : MonoBehaviour
 
     [SerializeField] private GameObject dialogueUI;
     [SerializeField] private TextMeshProUGUI dialogueText;
+    [SerializeField] private float typingSpeed = .05f;
 
     [SerializeField] private GameObject[] choices;
     private TextMeshProUGUI[] choicesText;
@@ -59,7 +61,7 @@ public class Dialogue : MonoBehaviour
 
         if (Input.GetKeyDown(continueKey)) 
         {
-            ContinueStory();
+            StartCoroutine(ContinueStory());
         }
     }
 
@@ -71,15 +73,17 @@ public class Dialogue : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
 
-        ContinueStory();
+        StartCoroutine(ContinueStory());
     }
 
-    private void ContinueStory()
+    private IEnumerator ContinueStory()
     {
         if (currentStory.canContinue)
         {
             dialogueText.text = currentStory.Continue();
+            yield return StartCoroutine(TypeText(dialogueText.text));
             DisplayChoices();
+
         }
         else
         {
@@ -93,8 +97,10 @@ public class Dialogue : MonoBehaviour
 
         dialogueIsPlaying = false;
         dialogueUI.SetActive(false);
+
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+
         dialogueText.text = "";
     }
 
@@ -123,6 +129,18 @@ public class Dialogue : MonoBehaviour
         StartCoroutine(SelectFirstChoice());
     }
 
+    private IEnumerator TypeText(string text)
+    {
+        dialogueText.text = "";
+        foreach (char letter in text.ToCharArray())
+        {
+            dialogueText.text += letter;
+            yield return new WaitForSeconds(typingSpeed);
+        }
+
+
+    }
+
     private IEnumerator SelectFirstChoice()
     {
         EventSystem.current.SetSelectedGameObject(null);
@@ -132,6 +150,7 @@ public class Dialogue : MonoBehaviour
 
     public void MakeChoice(int choiceIndex)
     {
-        currentStory.ChooseChoiceIndex(choiceIndex);
+      currentStory.ChooseChoiceIndex(choiceIndex);
+       
     }
 }
