@@ -6,13 +6,12 @@ using UnityEngine.SceneManagement;
 
 public class Puzzle1 : MonoBehaviour, IInteractable
 {
-    [SerializeField]private GameObject wirePuzzle;
+    [SerializeField] private GameObject wirePuzzle;
     public Transform interactorSource;
     [SerializeField] GameObject uiPromptButton;
     public float interactRange;
 
-    public int level = 1;
-
+    public int Wirelevel;
 
     private void Start()
     {
@@ -23,13 +22,28 @@ public class Puzzle1 : MonoBehaviour, IInteractable
     {
         //IF RAY HITS UI SHOWS UP
         Ray r = new Ray(interactorSource.position, interactorSource.forward);
-        if (Physics.Raycast(r, out RaycastHit hitInfo, interactRange))
+        if (Physics.Raycast(r, out RaycastHit hitInfo, interactRange) && Wirelevel == 1)
         {
             uiPromptButton.SetActive(true);
         }
         else
         {
             uiPromptButton.SetActive(false);
+        }
+
+        string answered = ((StringValue)Dialogue.GetInstance().GetVariableState("answer")).value;
+
+        switch (answered)
+        {
+            case "":
+                Wirelevel = 0; 
+                break;
+            case "yes":
+                Wirelevel = 1;
+                break;
+            default:
+                Debug.LogWarning("Answer not handeled by switch statement: " +  answered);
+                break;
         }
     }
   
@@ -49,7 +63,7 @@ public class Puzzle1 : MonoBehaviour, IInteractable
     {
         PlayerData data = SavePosition.LoadPlayer();
 
-        level = data.level;
+        Wirelevel = data.Wirelevel;
 
         Vector3 position;
         position.x = data.position[0];
@@ -59,8 +73,11 @@ public class Puzzle1 : MonoBehaviour, IInteractable
 
     public void Interact()
     {
+        if (Wirelevel == 1)
+        {
             WirePuzzle();
             SavePlayer();
+        }
         
     }
 }

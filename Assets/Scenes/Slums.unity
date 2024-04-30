@@ -177,6 +177,18 @@ MonoBehaviour:
   - {fileID: 1311466417}
   choice0: {fileID: 332562456}
   choice1: {fileID: 1311466419}
+  globalsInkFile:
+    inkAsset: {fileID: 102900000, guid: 3ad86413ef568564aafa02452cc9e57b, type: 3}
+    jsonAssetDirectory: {fileID: 0}
+    jsonAsset: {fileID: 0}
+    unhandledCompileErrors: []
+    recursiveIncludeErrorPaths: []
+    errors: []
+    warnings: []
+    todos: []
+    masterInkAssets: []
+    localIncludePaths: []
+    includes: []
   continueKey: 101
 --- !u!114 &38876443
 MonoBehaviour:
@@ -5623,7 +5635,7 @@ MonoBehaviour:
   interactorSource: {fileID: 1500305344}
   uiPromptButton: {fileID: 233256907}
   interactRange: 7
-  level: 1
+  Wirelevel: 0
 --- !u!65 &1500305346
 BoxCollider:
   m_ObjectHideFlags: 0

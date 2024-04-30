@@ -1,1 +1,1 @@
-EXTERNAL playPuzzle(puzzle)
+VAR answered = "" 

@@ -5,12 +5,12 @@ using UnityEngine;
 [System.Serializable]
 public class PlayerData 
 {
-    public int level;
+    public int Wirelevel;
     public float[] position;
 
    public PlayerData(Puzzle1 pos)
     {
-        level = pos.level;
+        Wirelevel = pos.Wirelevel;
 
         position = new float[3];
         position[0] = pos.transform.position.x;

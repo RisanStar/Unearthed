@@ -1,16 +1,26 @@
 INCLUDE ../Globals.ink
 
+{ answered == "": -> Main | -> in_progress }
 
--> Main
 === Main ===
 May you fix my house wires?
   * [Yes]
-     ~ playPuzzle("puzzle1")
-     ty #answer: Yes
-     -> Task
+     ty 
+     -> Task("yes")
   * [No]
-     ... #answer: No
-     -> Task
+     ... 
+     -> said_no
      
-=== Task ===
+=== Task(answer) ===
+Fix the wires by the Electric Tower.
+~ answered = answer
 -> END
+
+=== in_progress ===
+You already decided to say {answered}.
+Fix the wires by the Electric Tower.
+-> END
+
+=== said_no ===
+-> END
+
