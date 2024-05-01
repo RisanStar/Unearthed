@@ -16,6 +16,7 @@ public class Puzzle1 : MonoBehaviour, IInteractable
     private void Start()
     {
         wirePuzzle.SetActive(false);
+        Wirelevel = 0;
     }
 
     private void Update()
@@ -31,7 +32,7 @@ public class Puzzle1 : MonoBehaviour, IInteractable
             uiPromptButton.SetActive(false);
         }
 
-        string answered = ((StringValue)Dialogue.GetInstance().GetVariableState("answer")).value;
+        string answered = ((StringValue)Dialogue.GetInstance().GetVariableState("answered")).value;
 
         switch (answered)
         {

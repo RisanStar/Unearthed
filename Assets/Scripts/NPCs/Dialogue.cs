@@ -15,6 +15,7 @@ public class Dialogue : MonoBehaviour
     [SerializeField] private TextMeshProUGUI dialogueText;
     [SerializeField] private DialogueTrigger trigger;
     [SerializeField] private float typingSpeed = 1f;
+    private bool typing;
 
     [SerializeField] private GameObject[] choices;
     public Button choice0;
@@ -51,6 +52,7 @@ public class Dialogue : MonoBehaviour
     {
         dialogueIsPlaying = false;
         dialogueUI.SetActive(false);
+        typing = false;
 
 
         choicesText = new TextMeshProUGUI[choices.Length];
@@ -69,14 +71,15 @@ public class Dialogue : MonoBehaviour
            return;
         }
 
-        if (currentStory.currentChoices.Count == 0 && Input.GetKeyDown(continueKey)) 
+        if (currentStory.currentChoices.Count == 0 && Input.GetKeyDown(continueKey) && !typing) 
         {
             StartCoroutine(ContinueStory());
         }
     }
 
-    public void EnterDialogueMode(TextAsset ink)
+    public IEnumerator EnterDialogueMode(TextAsset ink)
     {
+        yield return new WaitForSeconds(.1f);
         currentStory = new Story(ink.text);
 
         dialogueIsPlaying = true;
@@ -96,10 +99,12 @@ public class Dialogue : MonoBehaviour
         if (currentStory.canContinue)
         {
             dialogueText.text = currentStory.Continue();
-            DisplayChoices();
             choice0.interactable = false;
             choice1.interactable = false;
+            DisplayChoices();
+            typing = true;
             yield return StartCoroutine(TypeText(dialogueText.text));
+            typing = false;
             choice0.interactable = true;
             choice1.interactable = true;
 
@@ -158,8 +163,6 @@ public class Dialogue : MonoBehaviour
             dialogueText.text += letter;
             yield return new WaitForSeconds(typingSpeed);
         }
-
-
     }
 
     private IEnumerator SelectFirstChoice()

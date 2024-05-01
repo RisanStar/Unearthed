@@ -28,7 +28,7 @@ public class DialogueTrigger : MonoBehaviour,IInteractable
     {
         if (!Dialogue.GetInstance().dialogueIsPlaying)
         {
-            Dialogue.GetInstance().EnterDialogueMode(ink);
+            StartCoroutine(Dialogue.GetInstance().EnterDialogueMode(ink));
         }
         
     }
