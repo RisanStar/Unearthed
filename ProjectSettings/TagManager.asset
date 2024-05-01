@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Firewood
   - Old Man
+  - NPC
   layers:
   - Default
   - TransparentFX

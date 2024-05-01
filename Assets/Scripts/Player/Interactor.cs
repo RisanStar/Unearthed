@@ -13,7 +13,7 @@ public class Interactor : MonoBehaviour
     //WHERE THE RAYCAST IS CAST FROM
     public Transform interactorSource;
     public float interactRange;
-
+  
     //INTERACT KEY
     public KeyCode interactKey = KeyCode.E;
 
@@ -21,23 +21,16 @@ public class Interactor : MonoBehaviour
     {
         //FROM THE FRONT OF THE PLAYER SHOOT A RAYCAST IN THAT DIRECTION WHEN PRESSING E
          if (Input.GetKeyDown(interactKey)) 
-        { 
-            Ray r = new (interactorSource.position, interactorSource.forward);
+        {
+               Ray r = new (interactorSource.position, interactorSource.forward);
             if (Physics.Raycast(r, out RaycastHit hitInfo, interactRange))
             {
                 //IF IT HITS THE RAY WILL TRY GET AN INTERFACE OF THAT OBJECT 
                 if (hitInfo.collider.gameObject.TryGetComponent(out IInteractable interactobj))
-                {
-
+                { 
                     interactobj.Interact();
                 }
             }
-            
-          
-
-            
- 
-           
             
         }
     }

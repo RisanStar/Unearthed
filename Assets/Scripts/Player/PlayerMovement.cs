@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     private float moveSpeed;
     public float walkSpeed;
     public float sprintSpeed;
+    private bool isWalking;
 
     public Transform orientation;
     Rigidbody rb;
@@ -44,9 +45,11 @@ public class PlayerMovement : MonoBehaviour
     public KeyCode sprintKey = KeyCode.LeftShift;
     public KeyCode crouchKey = KeyCode.LeftControl;
 
+    private AudioManager audioManager;
+
     public MovementState state;
     //STATES OF MOVEMENT
-      //*creates grouped constants
+    //*creates grouped constants
     public enum MovementState
     {
         walking,
@@ -66,6 +69,16 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        if (GameObject.FindWithTag("NPC") != null)
+        {
+            if (Dialogue.GetInstance().dialogueIsPlaying)
+            {
+                //DialogueStart(NPC);
+                return;
+            }
+        }
+     
+
         //CALLING PLAYER INPUT
         MyInput();
         //CALLING PLAYER SPEED
@@ -86,9 +99,13 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (Dialogue.GetInstance().dialogueIsPlaying)
+        if (GameObject.FindWithTag("NPC") != null)
         {
-            return;
+            if (Dialogue.GetInstance().dialogueIsPlaying)
+            {
+                //DialogueStart(NPC);
+                return;
+            }
         }
 
         //CALLING PLAYER MOVEMENT
@@ -122,7 +139,7 @@ public class PlayerMovement : MonoBehaviour
         vertical = Input.GetAxisRaw("Vertical");
 
         //PLAYER JUMP INPUT
-        if (Input.GetKey(jumpKey) && readyToJump && grounded && !Dialogue.GetInstance().dialogueIsPlaying)
+        if (Input.GetKey(jumpKey) && readyToJump && grounded)
         {
             readyToJump = false;
             Jump();
@@ -214,10 +231,11 @@ public class PlayerMovement : MonoBehaviour
     private void StateHandler()
     {
         //MODE - CROUCHING
-        if(grounded && Input.GetKey(crouchKey))
+        if (grounded && Input.GetKey(crouchKey))
         {
             state = MovementState.crouching;
             moveSpeed = crouchSpeed;
+
         }
 
         //MODE - SPRINTING
@@ -232,12 +250,14 @@ public class PlayerMovement : MonoBehaviour
         {
             state = MovementState.walking;
             moveSpeed = walkSpeed;
+
         }
 
         //MODE - AIR
         else
         {
             state = MovementState.air;
+
         }
 
     }

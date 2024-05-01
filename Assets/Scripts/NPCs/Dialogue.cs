@@ -85,12 +85,7 @@ public class Dialogue : MonoBehaviour
         dialogueIsPlaying = true;
         dialogueUI.SetActive(true);
         dialogueVariables.StartListening(currentStory);
-
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
-
         
-
         StartCoroutine(ContinueStory());
     }
 
@@ -123,9 +118,6 @@ public class Dialogue : MonoBehaviour
         dialogueIsPlaying = false;
         dialogueUI.SetActive(false);
         dialogueVariables.StopListening(currentStory);
-    
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
 
         dialogueText.text = "";
     }
