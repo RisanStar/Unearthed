@@ -15,7 +15,7 @@ public class CameraMovement : MonoBehaviour
     public Transform orientation;
     //private Transform playerCamera;
 
-    [SerializeField] Transform NPC;
+    //[SerializeField] Transform NPC;
 
 
 
