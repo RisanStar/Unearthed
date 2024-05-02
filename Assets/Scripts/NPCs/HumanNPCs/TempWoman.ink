@@ -43,7 +43,8 @@ Well if you're so knowlegeable may you fix my house wires?
 -> END
 
 === in_progress ===
-You already decided to say {answered}.                                                     [Fix the wires by the Electric Tower].
+You already decided to say {answered}.
+[Fix the wires by the Electric Tower].
 -> END
 
 
