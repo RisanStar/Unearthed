@@ -39,6 +39,9 @@ public class Puzzle1 : MonoBehaviour, IInteractable
             case "":
                 Wirelevel = 0; 
                 break;
+            case "no":
+                Wirelevel = 0;
+                break;
             case "yes":
                 Wirelevel = 1;
                 break;

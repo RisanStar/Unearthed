@@ -7,6 +7,7 @@ public class Elevator : MonoBehaviour
     [SerializeField] private ElevatorTrigger trigger;
 
     [SerializeField] GameObject[] waypoints;
+    private int currentWaypointIndex = 1;
 
     [SerializeField] float speed = 1f;
 
@@ -16,12 +17,10 @@ public class Elevator : MonoBehaviour
         {
             if (trigger.isInElevator == true)
             {
-                if (Vector3.Distance(waypoints[0].transform.position, waypoints[1].transform.position) < .1f)
-                {
-                    StartCoroutine(MoveElevator());
-                }
-
+                StartCoroutine(MoveElevator());
+                
             }
+
         }
 
     }
@@ -29,6 +28,10 @@ public class Elevator : MonoBehaviour
     private IEnumerator MoveElevator()
     {
         yield return new WaitForSeconds(.5f);
-        transform.position = Vector3.MoveTowards(waypoints[0].transform.position, waypoints[1].transform.position, speed * Time.deltaTime);
+        if (Vector3.Distance(transform.position, waypoints[currentWaypointIndex].transform.position) != 0f)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, waypoints[currentWaypointIndex].transform.position, speed * Time.deltaTime);
+        }
+  
     }
 }

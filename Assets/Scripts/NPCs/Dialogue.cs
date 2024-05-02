@@ -14,10 +14,11 @@ public class Dialogue : MonoBehaviour
     [SerializeField] private GameObject dialogueUI;
     [SerializeField] private TextMeshProUGUI dialogueText;
     [SerializeField] private DialogueTrigger trigger;
-    [SerializeField] private float typingSpeed = 1f;
+    private float typingSpeed = .02f;
     private bool typing;
 
     [SerializeField] private GameObject[] choices;
+    [SerializeField] private GameObject choiceUI;
     public Button choice0;
     public Button choice1;
     private TextMeshProUGUI[] choicesText;
@@ -52,6 +53,7 @@ public class Dialogue : MonoBehaviour
     {
         dialogueIsPlaying = false;
         dialogueUI.SetActive(false);
+        choiceUI.SetActive(false);
         typing = false;
 
 
@@ -94,15 +96,12 @@ public class Dialogue : MonoBehaviour
         if (currentStory.canContinue)
         {
             dialogueText.text = currentStory.Continue();
-            choice0.interactable = false;
-            choice1.interactable = false;
+            choiceUI.SetActive(false);
             DisplayChoices();
             typing = true;
             yield return StartCoroutine(TypeText(dialogueText.text));
             typing = false;
-            choice0.interactable = true;
-            choice1.interactable = true;
-
+            choiceUI.SetActive(true);
         }
         else
         {
@@ -174,7 +173,10 @@ public class Dialogue : MonoBehaviour
     public Ink.Runtime.Object GetVariableState(string variableName)
     {
         Ink.Runtime.Object variableValue = null;
-        dialogueVariables.variables.TryGetValue(variableName, out variableValue);
+        if (variableValue == null)
+        {
+            dialogueVariables.variables.TryGetValue(variableName, out variableValue);
+        }
         if (variableValue == null)
         {
             Debug.LogWarning("Ink Variable was found to be null: " + variableName);

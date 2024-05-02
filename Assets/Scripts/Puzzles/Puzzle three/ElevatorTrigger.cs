@@ -8,7 +8,7 @@ public class ElevatorTrigger : MonoBehaviour
     [SerializeField] private GameObject realElevator;
 
     public float doorCloseTime;
-    public bool isInElevator;
+    public bool isInElevator { get; private set; }
 
 
     private void Start()

@@ -4,24 +4,24 @@ using UnityEngine;
 
 public class DialogueTrigger : MonoBehaviour,IInteractable
 {
-    [SerializeField] private GameObject DialogueUI;
+    [SerializeField] private GameObject pressEUI;
     [SerializeField] private Transform interactorSource;
     [SerializeField] private float interactRange;
     [SerializeField] private TextAsset ink;
 
     private void Start()
     {
-        DialogueUI.SetActive(false);
+        pressEUI.SetActive(false);
     }
     private void FixedUpdate()
     {
         Ray r = new(interactorSource.position, interactorSource.forward);
         if (Physics.Raycast(r, interactRange) && !Dialogue.GetInstance().dialogueIsPlaying)
         {
-            DialogueUI.SetActive(true);
+            pressEUI.SetActive(true);
         }
         else
-            DialogueUI.SetActive(false);
+            pressEUI.SetActive(false);
 
     }
     public void Interact()
