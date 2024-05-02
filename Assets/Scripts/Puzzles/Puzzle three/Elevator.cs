@@ -4,25 +4,31 @@ using UnityEngine;
 
 public class Elevator : MonoBehaviour
 {
-    [SerializeField] private GameObject player;
-    [SerializeField] private GameObject realElevator;
+    [SerializeField] private ElevatorTrigger trigger;
 
-    public float doorCloseTime;
-    
+    [SerializeField] GameObject[] waypoints;
 
+    [SerializeField] float speed = 1f;
 
-
-    private void OnCollisionEnter(Collision collision)
+    private void Update()
     {
-        if (collision.collider == player)
+        if (trigger != null)
         {
-            StartCoroutine(StartElevator());
+            if (trigger.isInElevator == true)
+            {
+                if (Vector3.Distance(waypoints[0].transform.position, waypoints[1].transform.position) < .1f)
+                {
+                    StartCoroutine(MoveElevator());
+                }
+
+            }
         }
+
     }
 
-    private IEnumerator StartElevator()
+    private IEnumerator MoveElevator()
     {
-        yield return new WaitForSeconds(doorCloseTime);
-        player.transform.position = realElevator.transform.position;
+        yield return new WaitForSeconds(.5f);
+        transform.position = Vector3.MoveTowards(waypoints[0].transform.position, waypoints[1].transform.position, speed * Time.deltaTime);
     }
 }
