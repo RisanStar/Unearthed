@@ -77,7 +77,7 @@ public class PlayerMovement : MonoBehaviour
                 return;
             }
         }
-     
+      
 
         //CALLING PLAYER INPUT
         MyInput();
@@ -107,6 +107,7 @@ public class PlayerMovement : MonoBehaviour
                 return;
             }
         }
+
 
         //CALLING PLAYER MOVEMENT
         MovePlayer();

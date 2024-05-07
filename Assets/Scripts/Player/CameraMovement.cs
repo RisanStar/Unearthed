@@ -35,9 +35,9 @@ public class CameraMovement : MonoBehaviour
             }
         }
 
-        
-            //MOUSE INPUT
-            float mouseX = Input.GetAxisRaw("Mouse X") * Time.deltaTime * sensX;
+
+        //MOUSE INPUT
+        float mouseX = Input.GetAxisRaw("Mouse X") * Time.deltaTime * sensX;
             float mouseY = Input.GetAxisRaw("Mouse Y") * Time.deltaTime * sensY;
 
             //CAMERA ROTATION AND ORIENTATION
