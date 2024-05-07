@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DialogueTrigger : MonoBehaviour,IInteractable
 {
@@ -13,7 +14,7 @@ public class DialogueTrigger : MonoBehaviour,IInteractable
     {
         pressEUI.SetActive(false);
     }
-    private void FixedUpdate()
+    private void Update()
     {
         Ray r = new(interactorSource.position, interactorSource.forward);
         if (Physics.Raycast(r, interactRange) && !Dialogue.GetInstance().dialogueIsPlaying)

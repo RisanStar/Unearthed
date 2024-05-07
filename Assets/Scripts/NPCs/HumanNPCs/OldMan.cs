@@ -6,25 +6,26 @@ using UnityEngine.SceneManagement;
 
 public class OldMan : MonoBehaviour, IInteractable
 {
-    [SerializeField] GameObject oldManDialogue;
+    [SerializeField] GameObject uiPromptOldMan;
     public Transform interactorSource;
     public float interactRange;
 
     private void Start()
     {
-        oldManDialogue.SetActive(false);
+
+        uiPromptOldMan.SetActive(false);
     }
 
     private void Update()
     {
-        Ray r = new Ray(interactorSource.position, interactorSource.forward);
+        Ray r = new(interactorSource.position, interactorSource.forward);
         if (Physics.Raycast(r, interactRange))
         {
-            oldManDialogue.SetActive(true);
+            uiPromptOldMan.SetActive(true);
         }
         else
         {
-            oldManDialogue.SetActive(false);
+            uiPromptOldMan.SetActive(false);
         }
     }
     private void FlashBack()
