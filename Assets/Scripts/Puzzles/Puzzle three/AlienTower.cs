@@ -22,7 +22,7 @@ public class AlienTower : MonoBehaviour
     {
         if (allowedAccess)
         {
-            if (other.tag == "Player")
+            if (other.CompareTag("Player"))
             {
                 SceneManager.LoadScene("AlienTower");
             }
