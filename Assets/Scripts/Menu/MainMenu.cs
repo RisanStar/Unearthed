@@ -20,6 +20,8 @@ public class MainMenu : MonoBehaviour
         playBtn.SetActive(false);
         quitBtn.SetActive(false);
         ctrlBtn.SetActive(false);
+        backcredbtn.SetActive(false);
+        credbtn.SetActive(false);
         backctrlbtn.SetActive(true);
     }
 
@@ -28,6 +30,8 @@ public class MainMenu : MonoBehaviour
         playBtn.SetActive(false);
         quitBtn.SetActive(false);
         credbtn.SetActive(false);
+        backctrlbtn.SetActive(false);
+        ctrlBtn.SetActive(false);
         backcredbtn.SetActive(true);
     }
 

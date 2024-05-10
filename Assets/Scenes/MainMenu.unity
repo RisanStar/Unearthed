@@ -2016,12 +2016,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52c8d00dc520e2448a1fb90a18da54dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playBtn: {fileID: 0}
-  quitBtn: {fileID: 0}
-  ctrlBtn: {fileID: 0}
-  backctrlbtn: {fileID: 0}
-  credbtn: {fileID: 0}
-  backcredbtn: {fileID: 0}
+  playBtn: {fileID: 1314525015}
+  quitBtn: {fileID: 46231537}
+  ctrlBtn: {fileID: 1357663216}
+  backctrlbtn: {fileID: 1688899978}
+  credbtn: {fileID: 1275751170}
+  backcredbtn: {fileID: 1275751170}
 --- !u!4 &872102702
 Transform:
   m_ObjectHideFlags: 0
@@ -3200,7 +3200,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1357663217
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4213,7 +4213,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1709320276
 RectTransform:
   m_ObjectHideFlags: 0
