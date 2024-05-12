@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Campfire : MonoBehaviour
 {
-    public int firewoodLevel;
+    private int firewoodLevel;
 
     private void Start()
     {
@@ -14,6 +14,7 @@ public class Campfire : MonoBehaviour
 
     private void Update()
     {
+
         string gathered = ((StringValue)Dialogue.GetInstance().GetVariableState("gathered")).value;
         if (GameObject.FindWithTag("Firewood") == null)
         {

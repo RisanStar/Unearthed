@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class ActivateButton : MonoBehaviour, IInteractable
 {
     //BUTTON GAMEOBJ AND COLOUR VALUES + RANGE OF INTERACTION
-    public Renderer button;
+    [SerializeField] private Renderer button;
 
     [SerializeField] private Color newColor;
     [SerializeField] private Color[] colors;
@@ -16,15 +16,13 @@ public class ActivateButton : MonoBehaviour, IInteractable
     [SerializeField] float interactRange;
     [SerializeField] GameObject uiPromptButton;
 
-    internal object onClick;
-
     private void Start()
     {
         //UI DOESN'T SHOW UNTIL CLOSE
         uiPromptButton.SetActive(false);
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
         //IF RAY HITS UI SHOWS UP
         Ray r = new (interactorSource.position, interactorSource.forward);

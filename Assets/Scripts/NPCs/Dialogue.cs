@@ -19,8 +19,8 @@ public class Dialogue : MonoBehaviour
 
     [SerializeField] private GameObject[] choices;
     [SerializeField] private GameObject choiceUI;
-    public Button choice0;
-    public Button choice1;
+    [SerializeField] private Button choice0;
+    [SerializeField] private Button choice1;
     private TextMeshProUGUI[] choicesText;
 
     private DialogueVariables dialogueVariables;
@@ -28,7 +28,7 @@ public class Dialogue : MonoBehaviour
     private Story currentStory;
     [SerializeField] private InkFile globalsInkFile;
 
-    public KeyCode continueKey;
+    [SerializeField] private KeyCode continueKey;
 
     public bool dialogueIsPlaying { get; private set; }
 

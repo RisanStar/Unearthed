@@ -5,14 +5,14 @@ using UnityEngine;
 public class CameraMovement : MonoBehaviour
 {
     //CAMERA VARIABLES
-    public float sensX;
-    public float sensY;
+    [SerializeField] private float sensX;
+    [SerializeField] private float sensY;
   //private float turnSpeed = 2f;
 
     float xRotation;
     float yRotation;
 
-    public Transform orientation;
+    [SerializeField] private Transform orientation;
     //private Transform playerCamera;
 
     //[SerializeField] Transform NPC;

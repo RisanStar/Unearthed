@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class Elevator : MonoBehaviour
 {
-    private static Elevator instance;
-
     [SerializeField] private ElevatorTrigger trigger;
     [SerializeField] private GameObject player;
 

@@ -1,17 +1,13 @@
-using Ink.Runtime;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.XR;
+
 
 public class Pickup : MonoBehaviour, IInteractable
 {
     //FIREWOOD GAMEOBJ AND RANGE OF INTERACTION
-    public Transform interactorSource;
+    [SerializeField] private Transform interactorSource;
     [SerializeField] private GameObject firewood;
-    [SerializeField] GameObject uiPromptFirewood;
-    public float interactRange;
+    [SerializeField] private GameObject uiPromptFirewood;
+    [SerializeField] private float interactRange;
 
     private void Start()
     {
@@ -19,7 +15,7 @@ public class Pickup : MonoBehaviour, IInteractable
         uiPromptFirewood.SetActive(false);
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
         //IF RAY HITS OBJ THE UI SHOWS UP
         Ray r = new (interactorSource.position, interactorSource.forward);

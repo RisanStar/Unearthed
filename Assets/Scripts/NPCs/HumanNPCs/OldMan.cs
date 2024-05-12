@@ -1,14 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class OldMan : MonoBehaviour, IInteractable
 {
     [SerializeField] GameObject uiPromptOldMan;
-    public Transform interactorSource;
-    public float interactRange;
+    [SerializeField] private Transform interactorSource;
+    [SerializeField] private float interactRange;
 
     private void Start()
     {

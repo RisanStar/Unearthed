@@ -7,9 +7,9 @@ using UnityEngine.SceneManagement;
 public class Puzzle1 : MonoBehaviour, IInteractable
 {
     [SerializeField] private GameObject wirePuzzle;
-    public Transform interactorSource;
+    [SerializeField] private Transform interactorSource;
     [SerializeField] GameObject uiPromptButton;
-    public float interactRange;
+    [SerializeField] private float interactRange;
 
     public int Wirelevel;
 
@@ -22,8 +22,8 @@ public class Puzzle1 : MonoBehaviour, IInteractable
     private void Update()
     {
         //IF RAY HITS UI SHOWS UP
-        Ray r = new Ray(interactorSource.position, interactorSource.forward);
-        if (Physics.Raycast(r, out RaycastHit hitInfo, interactRange) && Wirelevel == 1)
+        Ray r = new(interactorSource.position, interactorSource.forward);
+        if (Physics.Raycast(r,interactRange) && Wirelevel == 1)
         {
             uiPromptButton.SetActive(true);
         }
