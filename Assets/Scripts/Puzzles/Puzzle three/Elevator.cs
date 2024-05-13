@@ -20,13 +20,6 @@ public class Elevator : MonoBehaviour
             if (trigger.isInElevator == true)
             {
                 StartCoroutine(MoveElevator());
-                CantMove();
-                
-            }
-
-            if (Vector3.Distance(transform.position, waypoints[currentWaypointIndex].transform.position) == 0f)
-            {
-                CanMove();
             }
 
         }

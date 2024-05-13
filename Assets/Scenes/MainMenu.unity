@@ -302,7 +302,6 @@ GameObject:
   - component: {fileID: 138014891}
   - component: {fileID: 138014890}
   - component: {fileID: 138014894}
-  - component: {fileID: 138014893}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -384,25 +383,6 @@ Transform:
   m_Father: {fileID: 1461650898}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &138014893
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 138014889}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4509770e6b14675479be39f825c6cec4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sounds:
-  - clip: {fileID: 8300000, guid: c24ed67d8c967c94a8cf198bbd64626e, type: 3}
-    Name: pianos
-    volume: 1
-    pitch: 0
-    loop: 1
-    source: {fileID: 0}
 --- !u!82 &138014894
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2020,7 +2000,7 @@ MonoBehaviour:
   quitBtn: {fileID: 46231537}
   ctrlBtn: {fileID: 1357663216}
   backctrlbtn: {fileID: 1688899978}
-  credbtn: {fileID: 1275751170}
+  credbtn: {fileID: 1709320275}
   backcredbtn: {fileID: 1275751170}
 --- !u!4 &872102702
 Transform:
@@ -2861,7 +2841,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 872102701}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
         m_MethodName: Back
         m_Mode: 1
@@ -3200,7 +3180,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1357663217
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4025,7 +4005,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 872102701}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
         m_MethodName: Back
         m_Mode: 1
@@ -4213,7 +4193,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1709320276
 RectTransform:
   m_ObjectHideFlags: 0
