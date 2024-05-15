@@ -12,7 +12,7 @@ public class MainMenu : MonoBehaviour
 
     public void Play()
     {
-        SceneManager.LoadScene("Slums");
+        SceneManager.LoadScene("StartingCutscene");
     }
 
     public void Controls()

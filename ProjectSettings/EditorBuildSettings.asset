@@ -21,9 +21,6 @@ EditorBuildSettings:
     path: Assets/Scenes/FlashBack.unity
     guid: 6d2c927819c65e0448b5195a69945990
   - enabled: 1
-    path: Assets/Scenes/Credits.unity
-    guid: 44416ae0c37b8b74aa656aba6ec9be22
-  - enabled: 1
-    path: Assets/Scenes/Controls.unity
-    guid: c689b949d02915041979d87c945dfdab
+    path: Assets/Scenes/StartingCutscene.unity
+    guid: abef07f457e7aa549ae3b0bcb9067822
   m_configObjects: {}
