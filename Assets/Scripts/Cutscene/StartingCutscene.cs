@@ -19,6 +19,7 @@ public class StartingCutscene : MonoBehaviour
 
     [SerializeField] private GameObject lighting1;
     [SerializeField] private GameObject lighting2;
+    [SerializeField] private GameObject lighting3;
 
     private void Start()
     {
@@ -50,5 +51,23 @@ public class StartingCutscene : MonoBehaviour
         Cam3.SetActive(false);
         cutscene4.SetActive(true);
         Cam4.SetActive(true);
+        lighting2.SetActive(false);
+        lighting3.SetActive(true);
+    }
+
+    public void Cutscene5()
+    {
+        cutscene4.SetActive(false);
+        Cam4.SetActive (false);
+        cutscene5.SetActive(true);
+        Cam5.SetActive(true);
+    }
+
+    public void Cutscene6()
+    {
+        cutscene5.SetActive(false);
+        Cam5 .SetActive(false);
+        cutscene6.SetActive(true);
+        cam6 .SetActive(true);
     }
 }
