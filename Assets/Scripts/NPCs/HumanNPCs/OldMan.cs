@@ -1,34 +1,50 @@
+using Ink.Runtime;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class OldMan : MonoBehaviour, IInteractable
 {
-    [SerializeField] GameObject uiPromptOldMan;
-    [SerializeField] private Transform interactorSource;
-    [SerializeField] private float interactRange;
+    private bool allowed;
+    public bool started {  get; private set; }
 
-    private void Start()
-    {
 
-        uiPromptOldMan.SetActive(false);
-    }
 
     private void Update()
     {
-        Ray r = new(interactorSource.position, interactorSource.forward);
-        if (Physics.Raycast(r, interactRange))
+
+        string collectTask = ((StringValue)Dialogue.GetInstance().GetVariableState("collectTask")).value;
+
+        switch (collectTask)
         {
-            uiPromptOldMan.SetActive(true);
+            case "":
+                started = false;
+                break;
+            case "no":
+                started = false;
+                break;
+            case "yes":
+                started = true;
+                break;
+            default:
+                Debug.LogWarning("Answer not handeled by switch statement: " + collectTask);
+                break;
+        }
+
+        if (GameObject.FindWithTag("Firewood") == null)
+        {
+            allowed = true;
         }
         else
         {
-            uiPromptOldMan.SetActive(false);
+            allowed = false;
         }
     }
     private void FlashBack()
     {
-        
-        SceneManager.LoadScene("FlashBack");
+        if (allowed)
+        {
+            SceneManager.LoadScene("FlashBack");
+        }
 
     }
  

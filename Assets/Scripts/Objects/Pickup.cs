@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 
@@ -9,10 +10,15 @@ public class Pickup : MonoBehaviour, IInteractable
     [SerializeField] private GameObject uiPromptFirewood;
     [SerializeField] private float interactRange;
 
+    private OldMan oldMan;
+    private bool spawned;
+
     private void Start()
     {
         //UI DOESN'T SHOW UNTIL CLOSE
         uiPromptFirewood.SetActive(false);
+        oldMan = GetComponent<OldMan>();
+        spawned = false;
     }
 
     private void Update()
@@ -27,6 +33,22 @@ public class Pickup : MonoBehaviour, IInteractable
         {
             uiPromptFirewood.SetActive(false);
         }
+
+        if(oldMan.started == true)
+        {
+            StartCoroutine(Spawn());
+            spawned = true;
+            if (spawned == true)
+            {
+                StopCoroutine(Spawn());
+            }
+        }
+    }
+
+    private IEnumerator Spawn()
+    {
+        Instantiate(firewood, transform.position, transform.rotation);
+        yield return new WaitForSeconds(10f);
     }
     public void Interact()
     {
