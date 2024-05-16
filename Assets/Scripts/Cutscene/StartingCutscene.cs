@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class StartingCutscene : MonoBehaviour
@@ -69,5 +68,10 @@ public class StartingCutscene : MonoBehaviour
         Cam5 .SetActive(false);
         cutscene6.SetActive(true);
         cam6 .SetActive(true);
+    }
+
+    public void Done()
+    {
+        SceneManager.LoadScene("Slums");
     }
 }

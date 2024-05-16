@@ -1,12 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
+
 
 public class Wire : MonoBehaviour
 {
-    public SpriteRenderer wireEnd;
-    public GameObject lightOn;
+    [SerializeField] private SpriteRenderer wireEnd;
+    [SerializeField] private GameObject lightOn;
     Vector3 startPoint;
     Vector3 startPosition;
 
