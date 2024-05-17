@@ -6,7 +6,7 @@ public class OldMan : MonoBehaviour, IInteractable
 {
     private bool allowed;
     public bool started {  get; private set; }
-
+    private Dialogue dialogue;
 
 
     private void Update()
@@ -33,7 +33,7 @@ public class OldMan : MonoBehaviour, IInteractable
         if (GameObject.FindWithTag("Firewood") == null)
         {
             allowed = true;
-            Dialogue.
+            dialogue.enabled = false;
         }
         else
         {
