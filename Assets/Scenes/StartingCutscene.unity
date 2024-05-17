@@ -137,15 +137,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1f3276ad050f7854a93a3124182fe3fe, type: 3}
       propertyPath: m_LocalScale.x
-      value: 700
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1f3276ad050f7854a93a3124182fe3fe, type: 3}
       propertyPath: m_LocalScale.y
-      value: 699.99994
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1f3276ad050f7854a93a3124182fe3fe, type: 3}
       propertyPath: m_LocalScale.z
-      value: 700
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1f3276ad050f7854a93a3124182fe3fe, type: 3}
       propertyPath: m_LocalPosition.x
@@ -153,7 +153,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1f3276ad050f7854a93a3124182fe3fe, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 21.489996
+      value: 14.4
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1f3276ad050f7854a93a3124182fe3fe, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4634,7 +4634,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &531660769
 Transform:
   m_ObjectHideFlags: 0
@@ -8860,27 +8860,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1f3276ad050f7854a93a3124182fe3fe, type: 3}
       propertyPath: m_LocalScale.x
-      value: 700
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1f3276ad050f7854a93a3124182fe3fe, type: 3}
       propertyPath: m_LocalScale.y
-      value: 699.99994
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1f3276ad050f7854a93a3124182fe3fe, type: 3}
       propertyPath: m_LocalScale.z
-      value: 700
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1f3276ad050f7854a93a3124182fe3fe, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 26.399992
+      value: 41.6
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1f3276ad050f7854a93a3124182fe3fe, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 21.489996
+      value: 19.4
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1f3276ad050f7854a93a3124182fe3fe, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -886.5999
+      value: -859.3
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1f3276ad050f7854a93a3124182fe3fe, type: 3}
       propertyPath: m_LocalRotation.w
@@ -10383,15 +10383,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1f3276ad050f7854a93a3124182fe3fe, type: 3}
       propertyPath: m_LocalScale.x
-      value: 700
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1f3276ad050f7854a93a3124182fe3fe, type: 3}
       propertyPath: m_LocalScale.y
-      value: 699.99994
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1f3276ad050f7854a93a3124182fe3fe, type: 3}
       propertyPath: m_LocalScale.z
-      value: 700
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1f3276ad050f7854a93a3124182fe3fe, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10399,7 +10399,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1f3276ad050f7854a93a3124182fe3fe, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 21.489996
+      value: 14.3
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1f3276ad050f7854a93a3124182fe3fe, type: 3}
       propertyPath: m_LocalPosition.z
@@ -13369,7 +13369,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: THE AJORKEN
+  m_text: THE OVERLORD'S NEXUS
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -13396,8 +13396,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 150
-  m_fontSizeBase: 150
+  m_fontSize: 130
+  m_fontSizeBase: 130
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -13432,7 +13432,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 1124.1665, w: 775.96857}
+  m_margin: {x: 0, y: 0, z: 60.443024, w: 775.96857}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -17309,7 +17309,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!20 &1694197461
 Camera:
   m_ObjectHideFlags: 0

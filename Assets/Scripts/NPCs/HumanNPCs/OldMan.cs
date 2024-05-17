@@ -33,6 +33,7 @@ public class OldMan : MonoBehaviour, IInteractable
         if (GameObject.FindWithTag("Firewood") == null)
         {
             allowed = true;
+            Dialogue.
         }
         else
         {
