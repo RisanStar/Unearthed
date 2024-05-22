@@ -2,7 +2,7 @@ using Ink.Runtime;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class OldMan : MonoBehaviour, IInteractable
+public class OldMan : MonoBehaviour
 {
     private bool allowed;
     public bool started {  get; private set; }
@@ -33,7 +33,7 @@ public class OldMan : MonoBehaviour, IInteractable
         if (GameObject.FindWithTag("Firewood") == null)
         {
             allowed = true;
-            dialogue.enabled = false;
+            FlashBack();
         }
         else
         {
@@ -48,10 +48,5 @@ public class OldMan : MonoBehaviour, IInteractable
         }
 
     }
- 
 
-    public void Interact()
-    {
-        FlashBack();
-    }
 }
