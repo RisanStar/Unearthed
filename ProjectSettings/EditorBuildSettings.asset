@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/StartingCutscene.unity
     guid: abef07f457e7aa549ae3b0bcb9067822
+  - enabled: 1
+    path: Assets/Scenes/Slums #2.unity
+    guid: 081e0092691ab784cb91993b71d6ad74
   m_configObjects: {}

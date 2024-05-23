@@ -17,7 +17,7 @@ public class Interactor : MonoBehaviour
     private LayerMask IgnoreRaycast;
     
     //INTERACT KEY
-    [SerializeField] private KeyCode interactKey = KeyCode.E;
+    private KeyCode interactKey = KeyCode.E;
 
     private void Start()
     {

@@ -14,7 +14,7 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
-  m_Fog: 1
+  m_Fog: 0
   m_FogColor: {r: 0.26415092, g: 0.26415092, b: 0.26415092, a: 1}
   m_FogMode: 3
   m_FogDensity: 0.1
@@ -134,6 +134,10 @@ PrefabInstance:
     - target: {fileID: 111725884416792279, guid: ebfabecdc8823094da829ca32dd6272d, type: 3}
       propertyPath: m_Name
       value: SlumBuilding 1 Variant (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 111725884416792279, guid: ebfabecdc8823094da829ca32dd6272d, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 111725884416792279, guid: ebfabecdc8823094da829ca32dd6272d, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -265,6 +269,10 @@ PrefabInstance:
     - target: {fileID: 4091969924471918831, guid: a97f89e4449e87742852aaeaf1ececb6, type: 3}
       propertyPath: m_Name
       value: Dead Tree Variant (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091969924471918831, guid: a97f89e4449e87742852aaeaf1ececb6, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4091969924471918831, guid: a97f89e4449e87742852aaeaf1ececb6, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -425,6 +433,10 @@ PrefabInstance:
       value: Dead Tree Variant
       objectReference: {fileID: 0}
     - target: {fileID: 4091969924471918831, guid: a97f89e4449e87742852aaeaf1ececb6, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091969924471918831, guid: a97f89e4449e87742852aaeaf1ececb6, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -510,6 +522,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7947423254330992062, guid: c533e46d1fc963b4db8b14c40f9da648, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7947423254330992062, guid: c533e46d1fc963b4db8b14c40f9da648, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -555,6 +575,7 @@ Transform:
   m_Children:
   - {fileID: 1055487398}
   - {fileID: 829809273}
+  - {fileID: 693252778}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -569,6 +590,10 @@ PrefabInstance:
     - target: {fileID: 111725884416792279, guid: ebfabecdc8823094da829ca32dd6272d, type: 3}
       propertyPath: m_Name
       value: SlumBuilding 1 Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 111725884416792279, guid: ebfabecdc8823094da829ca32dd6272d, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 111725884416792279, guid: ebfabecdc8823094da829ca32dd6272d, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -645,7 +670,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!65 &109696123
 BoxCollider:
@@ -807,6 +832,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7947423254330992062, guid: c533e46d1fc963b4db8b14c40f9da648, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7947423254330992062, guid: c533e46d1fc963b4db8b14c40f9da648, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -891,6 +924,10 @@ PrefabInstance:
       value: Dead Tree Variant
       objectReference: {fileID: 0}
     - target: {fileID: 4091969924471918831, guid: a97f89e4449e87742852aaeaf1ececb6, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091969924471918831, guid: a97f89e4449e87742852aaeaf1ececb6, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -968,6 +1005,10 @@ PrefabInstance:
       value: SlumBuilding 4 Variant
       objectReference: {fileID: 0}
     - target: {fileID: 6635199067857711162, guid: cee35b07f18ef0147914a792730cdbbe, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6635199067857711162, guid: cee35b07f18ef0147914a792730cdbbe, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -992,6 +1033,10 @@ PrefabInstance:
     - target: {fileID: 4690382375548586102, guid: 9ada4e830d01b2e4fb7770de0e1cdfc7, type: 3}
       propertyPath: m_Name
       value: SlumBuilding 2 Variant (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4690382375548586102, guid: 9ada4e830d01b2e4fb7770de0e1cdfc7, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4690382375548586102, guid: 9ada4e830d01b2e4fb7770de0e1cdfc7, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -1063,6 +1108,73 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5358233831698846412, guid: 9ada4e830d01b2e4fb7770de0e1cdfc7, type: 3}
   m_PrefabInstance: {fileID: 160376537}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &214730292
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 214730293}
+  - component: {fileID: 214730295}
+  - component: {fileID: 214730294}
+  m_Layer: 0
+  m_Name: Trigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &214730293
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 214730292}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 49.11, y: 0, z: 14.94}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 693252778}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &214730294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 214730292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceacd13d2c61596408ba7c77580e7eb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gObject: {fileID: 693252777}
+--- !u!135 &214730295
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 214730292}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 1.1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &239564451
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1074,6 +1186,10 @@ PrefabInstance:
     - target: {fileID: 111725884416792279, guid: ebfabecdc8823094da829ca32dd6272d, type: 3}
       propertyPath: m_Name
       value: SlumBuilding 1 Variant (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 111725884416792279, guid: ebfabecdc8823094da829ca32dd6272d, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 111725884416792279, guid: ebfabecdc8823094da829ca32dd6272d, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -1361,6 +1477,10 @@ PrefabInstance:
       value: Dead Tree Variant (5)
       objectReference: {fileID: 0}
     - target: {fileID: 4091969924471918831, guid: a97f89e4449e87742852aaeaf1ececb6, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091969924471918831, guid: a97f89e4449e87742852aaeaf1ececb6, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -1446,6 +1566,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7947423254330992062, guid: c533e46d1fc963b4db8b14c40f9da648, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7947423254330992062, guid: c533e46d1fc963b4db8b14c40f9da648, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1465,7 +1593,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 307752354}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: WallVariants 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1504,6 +1632,10 @@ PrefabInstance:
     - target: {fileID: 4690382375548586102, guid: 9ada4e830d01b2e4fb7770de0e1cdfc7, type: 3}
       propertyPath: m_Name
       value: SlumBuilding 2 Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 4690382375548586102, guid: 9ada4e830d01b2e4fb7770de0e1cdfc7, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4690382375548586102, guid: 9ada4e830d01b2e4fb7770de0e1cdfc7, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -1639,6 +1771,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7947423254330992062, guid: c533e46d1fc963b4db8b14c40f9da648, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7947423254330992062, guid: c533e46d1fc963b4db8b14c40f9da648, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1665,6 +1805,10 @@ PrefabInstance:
     - target: {fileID: 111725884416792279, guid: ebfabecdc8823094da829ca32dd6272d, type: 3}
       propertyPath: m_Name
       value: SlumBuilding 1 Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 111725884416792279, guid: ebfabecdc8823094da829ca32dd6272d, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 111725884416792279, guid: ebfabecdc8823094da829ca32dd6272d, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -1719,6 +1863,113 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ebfabecdc8823094da829ca32dd6272d, type: 3}
+--- !u!1001 &364536360
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 693252778}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 05e0f6e213b73c245886649113a253c2, type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 05e0f6e213b73c245886649113a253c2, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 05e0f6e213b73c245886649113a253c2, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 05e0f6e213b73c245886649113a253c2, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 05e0f6e213b73c245886649113a253c2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 49.38
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 05e0f6e213b73c245886649113a253c2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 05e0f6e213b73c245886649113a253c2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 14.82
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 05e0f6e213b73c245886649113a253c2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 05e0f6e213b73c245886649113a253c2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 05e0f6e213b73c245886649113a253c2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 05e0f6e213b73c245886649113a253c2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 05e0f6e213b73c245886649113a253c2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 05e0f6e213b73c245886649113a253c2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 05e0f6e213b73c245886649113a253c2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 05e0f6e213b73c245886649113a253c2, type: 3}
+      propertyPath: m_Name
+      value: Keycard
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 05e0f6e213b73c245886649113a253c2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 785647637}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 05e0f6e213b73c245886649113a253c2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1567565250}
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 05e0f6e213b73c245886649113a253c2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 364536366}
+  m_SourcePrefab: {fileID: 100100000, guid: 05e0f6e213b73c245886649113a253c2, type: 3}
+--- !u!4 &364536361 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 05e0f6e213b73c245886649113a253c2, type: 3}
+  m_PrefabInstance: {fileID: 364536360}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &364536362 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 05e0f6e213b73c245886649113a253c2, type: 3}
+  m_PrefabInstance: {fileID: 364536360}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &364536366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 364536362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a6c218ec5634914089dc49491d4ed82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainCamera: {fileID: 1573886726}
+  objectToRotate: {fileID: 364536361}
+  player: {fileID: 1571910979}
 --- !u!1 &370590002
 GameObject:
   m_ObjectHideFlags: 0
@@ -1800,6 +2051,10 @@ PrefabInstance:
       value: SlumBuilding 1 Variant (1)
       objectReference: {fileID: 0}
     - target: {fileID: 111725884416792279, guid: ebfabecdc8823094da829ca32dd6272d, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 111725884416792279, guid: ebfabecdc8823094da829ca32dd6272d, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -1866,7 +2121,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 399281805}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: WallVariant2 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2076,6 +2331,10 @@ PrefabInstance:
       value: Dead Tree Variant (2)
       objectReference: {fileID: 0}
     - target: {fileID: 4091969924471918831, guid: a97f89e4449e87742852aaeaf1ececb6, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091969924471918831, guid: a97f89e4449e87742852aaeaf1ececb6, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -2100,6 +2359,10 @@ PrefabInstance:
     - target: {fileID: 111725884416792279, guid: ebfabecdc8823094da829ca32dd6272d, type: 3}
       propertyPath: m_Name
       value: SlumBuilding 1 Variant (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 111725884416792279, guid: ebfabecdc8823094da829ca32dd6272d, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 111725884416792279, guid: ebfabecdc8823094da829ca32dd6272d, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -2320,6 +2583,10 @@ PrefabInstance:
       value: SlumBuilding 1 Variant (1)
       objectReference: {fileID: 0}
     - target: {fileID: 111725884416792279, guid: ebfabecdc8823094da829ca32dd6272d, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 111725884416792279, guid: ebfabecdc8823094da829ca32dd6272d, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -2423,6 +2690,10 @@ PrefabInstance:
     - target: {fileID: 111725884416792279, guid: ebfabecdc8823094da829ca32dd6272d, type: 3}
       propertyPath: m_Name
       value: SlumBuilding 1 Variant (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 111725884416792279, guid: ebfabecdc8823094da829ca32dd6272d, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 111725884416792279, guid: ebfabecdc8823094da829ca32dd6272d, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -2551,6 +2822,10 @@ PrefabInstance:
       value: Dead Tree Variant
       objectReference: {fileID: 0}
     - target: {fileID: 4091969924471918831, guid: a97f89e4449e87742852aaeaf1ececb6, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091969924471918831, guid: a97f89e4449e87742852aaeaf1ececb6, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -2622,6 +2897,14 @@ PrefabInstance:
     - target: {fileID: 7278164422712082180, guid: c533e46d1fc963b4db8b14c40f9da648, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7947423254330992062, guid: c533e46d1fc963b4db8b14c40f9da648, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7947423254330992062, guid: c533e46d1fc963b4db8b14c40f9da648, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2695,6 +2978,10 @@ PrefabInstance:
     - target: {fileID: 4091969924471918831, guid: a97f89e4449e87742852aaeaf1ececb6, type: 3}
       propertyPath: m_Name
       value: Dead Tree Variant (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091969924471918831, guid: a97f89e4449e87742852aaeaf1ececb6, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4091969924471918831, guid: a97f89e4449e87742852aaeaf1ececb6, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -2840,103 +3127,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 557343919}
   m_CullTransparentMesh: 1
---- !u!1 &561821569
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 561821570}
-  - component: {fileID: 561821572}
-  - component: {fileID: 561821571}
-  m_Layer: 0
-  m_Name: MiniMapCamera
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &561821570
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 561821569}
-  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 19, z: 10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1464072269}
-  m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!114 &561821571
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 561821569}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e47c1272a09b88f469340facfc45b225, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 1571910985}
---- !u!20 &561821572
-Camera:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 561821569}
-  m_Enabled: 1
-  serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
-  m_projectionMatrixMode: 1
-  m_GateFitMode: 2
-  m_FOVAxisMode: 1
-  m_Iso: 200
-  m_ShutterSpeed: 0.005
-  m_Aperture: 16
-  m_FocusDistance: 10
-  m_FocalLength: 50
-  m_BladeCount: 5
-  m_Curvature: {x: 2, y: 11}
-  m_BarrelClipping: 0.25
-  m_Anamorphism: 0
-  m_SensorSize: {x: 36, y: 24}
-  m_LensShift: {x: 0, y: 0}
-  m_NormalizedViewPortRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
-  near clip plane: 0.01
-  far clip plane: 1000
-  field of view: 64.44014
-  orthographic: 1
-  orthographic size: 6
-  m_Depth: -1
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RenderingPath: -1
-  m_TargetTexture: {fileID: 8400000, guid: 1c6f6b49620ece447b250aad61683376, type: 2}
-  m_TargetDisplay: 0
-  m_TargetEye: 3
-  m_HDR: 1
-  m_AllowMSAA: 1
-  m_AllowDynamicResolution: 0
-  m_ForceIntoRT: 0
-  m_OcclusionCulling: 1
-  m_StereoConvergence: 10
-  m_StereoSeparation: 0.022
 --- !u!1 &604596860
 GameObject:
   m_ObjectHideFlags: 0
@@ -2979,6 +3169,10 @@ PrefabInstance:
     - target: {fileID: 111725884416792279, guid: ebfabecdc8823094da829ca32dd6272d, type: 3}
       propertyPath: m_Name
       value: SlumBuilding 1 Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 111725884416792279, guid: ebfabecdc8823094da829ca32dd6272d, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 111725884416792279, guid: ebfabecdc8823094da829ca32dd6272d, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -3067,7 +3261,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &643139392
 Transform:
@@ -3167,6 +3361,10 @@ PrefabInstance:
     - target: {fileID: 111725884416792279, guid: ebfabecdc8823094da829ca32dd6272d, type: 3}
       propertyPath: m_Name
       value: SlumBuilding 1 Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 111725884416792279, guid: ebfabecdc8823094da829ca32dd6272d, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 111725884416792279, guid: ebfabecdc8823094da829ca32dd6272d, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -3329,7 +3527,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 655991748}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: WallVariant2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3369,6 +3567,10 @@ PrefabInstance:
     - target: {fileID: 111725884416792279, guid: ebfabecdc8823094da829ca32dd6272d, type: 3}
       propertyPath: m_Name
       value: SlumBuilding 1 Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 111725884416792279, guid: ebfabecdc8823094da829ca32dd6272d, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 111725884416792279, guid: ebfabecdc8823094da829ca32dd6272d, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -3450,6 +3652,39 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3711608601958894165, guid: a97f89e4449e87742852aaeaf1ececb6, type: 3}
   m_PrefabInstance: {fileID: 72291831}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &693252777
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 693252778}
+  m_Layer: 0
+  m_Name: Key
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &693252778
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 693252777}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 364536361}
+  - {fileID: 214730293}
+  m_Father: {fileID: 94799842}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &696263262 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3711608601958894165, guid: a97f89e4449e87742852aaeaf1ececb6, type: 3}
@@ -3464,7 +3699,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 744277494}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: WallVariant2 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3566,6 +3801,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7947423254330992062, guid: c533e46d1fc963b4db8b14c40f9da648, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7947423254330992062, guid: c533e46d1fc963b4db8b14c40f9da648, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3587,6 +3830,10 @@ PrefabInstance:
     - target: {fileID: 111725884416792279, guid: ebfabecdc8823094da829ca32dd6272d, type: 3}
       propertyPath: m_Name
       value: SlumBuilding 1 Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 111725884416792279, guid: ebfabecdc8823094da829ca32dd6272d, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 111725884416792279, guid: ebfabecdc8823094da829ca32dd6272d, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -3710,6 +3957,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7947423254330992062, guid: c533e46d1fc963b4db8b14c40f9da648, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7947423254330992062, guid: c533e46d1fc963b4db8b14c40f9da648, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3817,6 +4072,10 @@ PrefabInstance:
       value: Dead Tree Variant (1)
       objectReference: {fileID: 0}
     - target: {fileID: 4091969924471918831, guid: a97f89e4449e87742852aaeaf1ececb6, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091969924471918831, guid: a97f89e4449e87742852aaeaf1ececb6, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -3825,6 +4084,111 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a97f89e4449e87742852aaeaf1ececb6, type: 3}
+--- !u!1 &785647636
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 785647637}
+  - component: {fileID: 785647640}
+  - component: {fileID: 785647639}
+  - component: {fileID: 785647638}
+  m_Layer: 0
+  m_Name: Sphere
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &785647637
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 785647636}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.015, y: 0.015, z: 0.015}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 364536361}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &785647638
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 785647636}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &785647639
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 785647636}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 9ba25034fe8fa514db016fab67b0ee07, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &785647640
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 785647636}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &786103093
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3885,6 +4249,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7947423254330992062, guid: c533e46d1fc963b4db8b14c40f9da648, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7947423254330992062, guid: c533e46d1fc963b4db8b14c40f9da648, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3901,6 +4273,10 @@ PrefabInstance:
     - target: {fileID: 4690382375548586102, guid: 9ada4e830d01b2e4fb7770de0e1cdfc7, type: 3}
       propertyPath: m_Name
       value: SlumBuilding 2 Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 4690382375548586102, guid: 9ada4e830d01b2e4fb7770de0e1cdfc7, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4690382375548586102, guid: 9ada4e830d01b2e4fb7770de0e1cdfc7, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -3998,7 +4374,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 829809272}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -39.14, y: 6.52, z: 31.39}
+  m_LocalPosition: {x: -39.14, y: 6.52, z: 37.79}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4024,7 +4400,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 15.2, y: 17.03, z: 1}
+  m_Size: {x: 15.2, y: 21.8, z: 8.9}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &829809275
 MonoBehaviour:
@@ -4038,6 +4414,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 082abcf4d81b9c948af3cfc6a08eb462, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  keyCard: {fileID: 693252777}
+  hutLight: {fileID: 1334900658}
 --- !u!1 &853737737
 GameObject:
   m_ObjectHideFlags: 0
@@ -4153,7 +4531,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 857732497}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: MazeWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4246,6 +4624,10 @@ PrefabInstance:
       value: SlumBuilding 4 Variant
       objectReference: {fileID: 0}
     - target: {fileID: 6635199067857711162, guid: cee35b07f18ef0147914a792730cdbbe, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6635199067857711162, guid: cee35b07f18ef0147914a792730cdbbe, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -4326,6 +4708,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7947423254330992062, guid: c533e46d1fc963b4db8b14c40f9da648, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7947423254330992062, guid: c533e46d1fc963b4db8b14c40f9da648, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4345,7 +4735,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 879096099}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: WallVariants 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4394,6 +4784,10 @@ PrefabInstance:
     - target: {fileID: 4690382375548586102, guid: 9ada4e830d01b2e4fb7770de0e1cdfc7, type: 3}
       propertyPath: m_Name
       value: SlumBuilding 2 Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 4690382375548586102, guid: 9ada4e830d01b2e4fb7770de0e1cdfc7, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4690382375548586102, guid: 9ada4e830d01b2e4fb7770de0e1cdfc7, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -4529,6 +4923,10 @@ PrefabInstance:
       value: Dead Tree Variant (1)
       objectReference: {fileID: 0}
     - target: {fileID: 4091969924471918831, guid: a97f89e4449e87742852aaeaf1ececb6, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091969924471918831, guid: a97f89e4449e87742852aaeaf1ececb6, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -4582,12 +4980,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 994460728}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Points
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &994460728
 Transform:
@@ -4665,6 +5063,14 @@ PrefabInstance:
     - target: {fileID: 7278164422712082180, guid: c533e46d1fc963b4db8b14c40f9da648, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7947423254330992062, guid: c533e46d1fc963b4db8b14c40f9da648, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7947423254330992062, guid: c533e46d1fc963b4db8b14c40f9da648, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4744,6 +5150,14 @@ PrefabInstance:
     - target: {fileID: 7278164422712082180, guid: c533e46d1fc963b4db8b14c40f9da648, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7947423254330992062, guid: c533e46d1fc963b4db8b14c40f9da648, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7947423254330992062, guid: c533e46d1fc963b4db8b14c40f9da648, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4913,6 +5327,10 @@ PrefabInstance:
       value: Dead Tree Variant (1)
       objectReference: {fileID: 0}
     - target: {fileID: 4091969924471918831, guid: a97f89e4449e87742852aaeaf1ececb6, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091969924471918831, guid: a97f89e4449e87742852aaeaf1ececb6, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -4988,6 +5406,10 @@ PrefabInstance:
     - target: {fileID: 4091969924471918831, guid: a97f89e4449e87742852aaeaf1ececb6, type: 3}
       propertyPath: m_Name
       value: Dead Tree Variant (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091969924471918831, guid: a97f89e4449e87742852aaeaf1ececb6, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4091969924471918831, guid: a97f89e4449e87742852aaeaf1ececb6, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -5091,6 +5513,10 @@ PrefabInstance:
       value: SlumBuilding 1 Variant
       objectReference: {fileID: 0}
     - target: {fileID: 111725884416792279, guid: ebfabecdc8823094da829ca32dd6272d, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 111725884416792279, guid: ebfabecdc8823094da829ca32dd6272d, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -5178,6 +5604,10 @@ PrefabInstance:
       value: SlumBuilding 1 Variant (1)
       objectReference: {fileID: 0}
     - target: {fileID: 111725884416792279, guid: ebfabecdc8823094da829ca32dd6272d, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 111725884416792279, guid: ebfabecdc8823094da829ca32dd6272d, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -5244,7 +5674,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1101251750}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: WallVariant1 (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5336,6 +5766,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7947423254330992062, guid: c533e46d1fc963b4db8b14c40f9da648, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7947423254330992062, guid: c533e46d1fc963b4db8b14c40f9da648, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5355,7 +5793,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1134105719}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: WallVariant1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5393,6 +5831,10 @@ PrefabInstance:
     - target: {fileID: 111725884416792279, guid: ebfabecdc8823094da829ca32dd6272d, type: 3}
       propertyPath: m_Name
       value: SlumBuilding 1 Variant (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 111725884416792279, guid: ebfabecdc8823094da829ca32dd6272d, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 111725884416792279, guid: ebfabecdc8823094da829ca32dd6272d, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -5466,7 +5908,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1164745467}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: WallVariant1 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5504,6 +5946,10 @@ PrefabInstance:
     - target: {fileID: 111725884416792279, guid: ebfabecdc8823094da829ca32dd6272d, type: 3}
       propertyPath: m_Name
       value: SlumBuilding 1 Variant (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 111725884416792279, guid: ebfabecdc8823094da829ca32dd6272d, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 111725884416792279, guid: ebfabecdc8823094da829ca32dd6272d, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -5631,6 +6077,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7947423254330992062, guid: c533e46d1fc963b4db8b14c40f9da648, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7947423254330992062, guid: c533e46d1fc963b4db8b14c40f9da648, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5710,6 +6164,10 @@ PrefabInstance:
       value: Dead Tree Variant (4)
       objectReference: {fileID: 0}
     - target: {fileID: 4091969924471918831, guid: a97f89e4449e87742852aaeaf1ececb6, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091969924471918831, guid: a97f89e4449e87742852aaeaf1ececb6, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -5732,7 +6190,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1227754067}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: WallVariant1 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5767,6 +6225,10 @@ PrefabInstance:
     - target: {fileID: 111725884416792279, guid: ebfabecdc8823094da829ca32dd6272d, type: 3}
       propertyPath: m_Name
       value: SlumBuilding 1 Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 111725884416792279, guid: ebfabecdc8823094da829ca32dd6272d, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 111725884416792279, guid: ebfabecdc8823094da829ca32dd6272d, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -5830,12 +6292,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1249250258}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: EndPoint
   m_TagString: Untagged
   m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1249250258
 Transform:
@@ -5923,6 +6385,14 @@ PrefabInstance:
     - target: {fileID: 7278164422712082180, guid: c533e46d1fc963b4db8b14c40f9da648, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7947423254330992062, guid: c533e46d1fc963b4db8b14c40f9da648, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7947423254330992062, guid: c533e46d1fc963b4db8b14c40f9da648, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6143,6 +6613,10 @@ PrefabInstance:
       value: SlumBuilding 4 Variant
       objectReference: {fileID: 0}
     - target: {fileID: 6635199067857711162, guid: cee35b07f18ef0147914a792730cdbbe, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6635199067857711162, guid: cee35b07f18ef0147914a792730cdbbe, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -6160,7 +6634,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1294608789}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: WallVariant2 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6203,7 +6677,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1306730488}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: WallVariant1 (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6290,6 +6764,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7947423254330992062, guid: c533e46d1fc963b4db8b14c40f9da648, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7947423254330992062, guid: c533e46d1fc963b4db8b14c40f9da648, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6314,7 +6796,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1322023062}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: WallVariant1 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6506,6 +6988,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7947423254330992062, guid: c533e46d1fc963b4db8b14c40f9da648, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7947423254330992062, guid: c533e46d1fc963b4db8b14c40f9da648, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6619,12 +7109,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1380933720}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Maze
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1380933720
 Transform:
@@ -6655,13 +7145,13 @@ GameObject:
   - component: {fileID: 1390128287}
   - component: {fileID: 1390128290}
   - component: {fileID: 1390128289}
-  - component: {fileID: 1390128288}
-  m_Layer: 0
+  - component: {fileID: 1390128291}
+  m_Layer: 6
   m_Name: EndingPlatform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1390128287
 Transform:
@@ -6671,36 +7161,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1390128286}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -43.41, y: 0, z: 35.15}
+  m_LocalPosition: {x: -43.41, y: -0.2, z: 35.15}
   m_LocalScale: {x: 25, y: 0.1, z: 25}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1492127028}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &1390128288
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1390128286}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!23 &1390128289
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6750,6 +7217,28 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1390128286}
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!64 &1390128291
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1390128286}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &1416473569
 PrefabInstance:
@@ -6820,6 +7309,10 @@ PrefabInstance:
       value: Dead Tree Variant (2)
       objectReference: {fileID: 0}
     - target: {fileID: 4091969924471918831, guid: a97f89e4449e87742852aaeaf1ececb6, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091969924471918831, guid: a97f89e4449e87742852aaeaf1ececb6, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -6876,7 +7369,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1573886720}
-  - {fileID: 561821570}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6949,6 +7441,10 @@ PrefabInstance:
       value: SlumBuilding 4 Variant
       objectReference: {fileID: 0}
     - target: {fileID: 6635199067857711162, guid: cee35b07f18ef0147914a792730cdbbe, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6635199067857711162, guid: cee35b07f18ef0147914a792730cdbbe, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -6966,12 +7462,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1492127028}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Platforms
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1492127028
 Transform:
@@ -7007,6 +7503,10 @@ PrefabInstance:
     - target: {fileID: 4690382375548586102, guid: 9ada4e830d01b2e4fb7770de0e1cdfc7, type: 3}
       propertyPath: m_Name
       value: SlumBuilding 2 Variant (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4690382375548586102, guid: 9ada4e830d01b2e4fb7770de0e1cdfc7, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4690382375548586102, guid: 9ada4e830d01b2e4fb7770de0e1cdfc7, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -7138,6 +7638,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7947423254330992062, guid: c533e46d1fc963b4db8b14c40f9da648, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7947423254330992062, guid: c533e46d1fc963b4db8b14c40f9da648, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7210,6 +7718,10 @@ PrefabInstance:
     - target: {fileID: 4091969924471918831, guid: a97f89e4449e87742852aaeaf1ececb6, type: 3}
       propertyPath: m_Name
       value: Dead Tree Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091969924471918831, guid: a97f89e4449e87742852aaeaf1ececb6, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4091969924471918831, guid: a97f89e4449e87742852aaeaf1ececb6, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -7294,6 +7806,10 @@ PrefabInstance:
       value: Dead Tree Variant (3)
       objectReference: {fileID: 0}
     - target: {fileID: 4091969924471918831, guid: a97f89e4449e87742852aaeaf1ececb6, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091969924471918831, guid: a97f89e4449e87742852aaeaf1ececb6, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -7316,7 +7832,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1554738634}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: WallVariant1 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7402,11 +7918,113 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7947423254330992062, guid: c533e46d1fc963b4db8b14c40f9da648, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7947423254330992062, guid: c533e46d1fc963b4db8b14c40f9da648, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c533e46d1fc963b4db8b14c40f9da648, type: 3}
+--- !u!1 &1567565249
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1567565250}
+  - component: {fileID: 1567565251}
+  m_Layer: 0
+  m_Name: Point Light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1567565250
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1567565249}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 364536361}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!108 &1567565251
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1567565249}
+  m_Enabled: 1
+  serializedVersion: 10
+  m_Type: 2
+  m_Shape: 0
+  m_Color: {r: 0.9716981, g: 0.8294928, b: 0.23375754, a: 1}
+  m_Intensity: 100
+  m_Range: 3
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 2
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
 --- !u!1001 &1569670371
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7478,6 +8096,14 @@ PrefabInstance:
     - target: {fileID: 7278164422712082180, guid: c533e46d1fc963b4db8b14c40f9da648, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7947423254330992062, guid: c533e46d1fc963b4db8b14c40f9da648, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7947423254330992062, guid: c533e46d1fc963b4db8b14c40f9da648, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7560,8 +8186,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 799fc7dbbacb8114c8364ffb56e42477, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkSpeed: 7
-  sprintSpeed: 10
+  walkSpeed: 6
+  sprintSpeed: 8
   orientation: {fileID: 604596861}
   playerHeight: 2
   groundDrag: 2
@@ -7752,8 +8378,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactorSource: {fileID: 1573886720}
-  interactRange: 30
-  interactKey: 101
+  interactRange: 5
 --- !u!114 &1573886724
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7933,7 +8558,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1591827324}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: WallVariant2 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8164,6 +8789,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7947423254330992062, guid: c533e46d1fc963b4db8b14c40f9da648, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7947423254330992062, guid: c533e46d1fc963b4db8b14c40f9da648, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8451593109212251243, guid: c533e46d1fc963b4db8b14c40f9da648, type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
@@ -8197,6 +8830,10 @@ PrefabInstance:
     - target: {fileID: 111725884416792279, guid: ebfabecdc8823094da829ca32dd6272d, type: 3}
       propertyPath: m_Name
       value: SlumBuilding 1 Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 111725884416792279, guid: ebfabecdc8823094da829ca32dd6272d, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 111725884416792279, guid: ebfabecdc8823094da829ca32dd6272d, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -8267,6 +8904,10 @@ PrefabInstance:
     - target: {fileID: 4690382375548586102, guid: 9ada4e830d01b2e4fb7770de0e1cdfc7, type: 3}
       propertyPath: m_Name
       value: SlumBuilding 2 Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 4690382375548586102, guid: 9ada4e830d01b2e4fb7770de0e1cdfc7, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4690382375548586102, guid: 9ada4e830d01b2e4fb7770de0e1cdfc7, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -8344,6 +8985,10 @@ PrefabInstance:
     - target: {fileID: 111725884416792279, guid: ebfabecdc8823094da829ca32dd6272d, type: 3}
       propertyPath: m_Name
       value: SlumBuilding 1 Variant (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 111725884416792279, guid: ebfabecdc8823094da829ca32dd6272d, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 111725884416792279, guid: ebfabecdc8823094da829ca32dd6272d, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -8428,6 +9073,10 @@ PrefabInstance:
       value: SlumBuilding 1 Variant (1)
       objectReference: {fileID: 0}
     - target: {fileID: 111725884416792279, guid: ebfabecdc8823094da829ca32dd6272d, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 111725884416792279, guid: ebfabecdc8823094da829ca32dd6272d, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -8489,7 +9138,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1694520084}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: WallVariant2 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8583,6 +9232,10 @@ PrefabInstance:
       value: SlumBuilding 4 Variant
       objectReference: {fileID: 0}
     - target: {fileID: 6635199067857711162, guid: cee35b07f18ef0147914a792730cdbbe, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6635199067857711162, guid: cee35b07f18ef0147914a792730cdbbe, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -8650,6 +9303,14 @@ PrefabInstance:
     - target: {fileID: 7278164422712082180, guid: c533e46d1fc963b4db8b14c40f9da648, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7947423254330992062, guid: c533e46d1fc963b4db8b14c40f9da648, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7947423254330992062, guid: c533e46d1fc963b4db8b14c40f9da648, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8745,6 +9406,10 @@ PrefabInstance:
     - target: {fileID: 6635199067857711162, guid: cee35b07f18ef0147914a792730cdbbe, type: 3}
       propertyPath: m_Name
       value: SlumBuilding 4 Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 6635199067857711162, guid: cee35b07f18ef0147914a792730cdbbe, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6635199067857711162, guid: cee35b07f18ef0147914a792730cdbbe, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -8863,7 +9528,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1827101473}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: WallVariant1 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8943,6 +9608,10 @@ PrefabInstance:
     - target: {fileID: 6635199067857711162, guid: cee35b07f18ef0147914a792730cdbbe, type: 3}
       propertyPath: m_Name
       value: SlumBuilding 4 Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 6635199067857711162, guid: cee35b07f18ef0147914a792730cdbbe, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6635199067857711162, guid: cee35b07f18ef0147914a792730cdbbe, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -9025,6 +9694,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7947423254330992062, guid: c533e46d1fc963b4db8b14c40f9da648, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7947423254330992062, guid: c533e46d1fc963b4db8b14c40f9da648, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9046,6 +9723,10 @@ PrefabInstance:
     - target: {fileID: 111725884416792279, guid: ebfabecdc8823094da829ca32dd6272d, type: 3}
       propertyPath: m_Name
       value: SlumBuilding 1 Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 111725884416792279, guid: ebfabecdc8823094da829ca32dd6272d, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 111725884416792279, guid: ebfabecdc8823094da829ca32dd6272d, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -9169,6 +9850,10 @@ PrefabInstance:
       value: Dead Tree Variant (1)
       objectReference: {fileID: 0}
     - target: {fileID: 4091969924471918831, guid: a97f89e4449e87742852aaeaf1ececb6, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091969924471918831, guid: a97f89e4449e87742852aaeaf1ececb6, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -9249,6 +9934,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7947423254330992062, guid: c533e46d1fc963b4db8b14c40f9da648, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7947423254330992062, guid: c533e46d1fc963b4db8b14c40f9da648, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9270,6 +9963,10 @@ PrefabInstance:
     - target: {fileID: 4690382375548586102, guid: 9ada4e830d01b2e4fb7770de0e1cdfc7, type: 3}
       propertyPath: m_Name
       value: SlumBuilding 2 Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 4690382375548586102, guid: 9ada4e830d01b2e4fb7770de0e1cdfc7, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4690382375548586102, guid: 9ada4e830d01b2e4fb7770de0e1cdfc7, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -9345,7 +10042,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1883328139}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: WallVariant1 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9473,12 +10170,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1954746928}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: StartPoint
   m_TagString: Untagged
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1954746928
 Transform:
@@ -9504,7 +10201,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1972882468}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: WallVariant1 (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9592,6 +10289,14 @@ PrefabInstance:
     - target: {fileID: 7278164422712082180, guid: c533e46d1fc963b4db8b14c40f9da648, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7947423254330992062, guid: c533e46d1fc963b4db8b14c40f9da648, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7947423254330992062, guid: c533e46d1fc963b4db8b14c40f9da648, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9828,6 +10533,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7947423254330992062, guid: c533e46d1fc963b4db8b14c40f9da648, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7947423254330992062, guid: c533e46d1fc963b4db8b14c40f9da648, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9854,6 +10567,10 @@ PrefabInstance:
     - target: {fileID: 111725884416792279, guid: ebfabecdc8823094da829ca32dd6272d, type: 3}
       propertyPath: m_Name
       value: SlumBuilding 1 Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 111725884416792279, guid: ebfabecdc8823094da829ca32dd6272d, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 111725884416792279, guid: ebfabecdc8823094da829ca32dd6272d, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -9929,7 +10646,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2137447157}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: WallVariant1
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -6,8 +6,7 @@ public class OldMan : MonoBehaviour
 {
     private bool allowed;
     public bool started {  get; private set; }
-    private Dialogue dialogue;
-
+    [SerializeField] private GameObject indicator;
 
     private void Update()
     {
@@ -33,20 +32,24 @@ public class OldMan : MonoBehaviour
         if (GameObject.FindWithTag("Firewood") == null)
         {
             allowed = true;
-            FlashBack();
+            indicator.SetActive(true);
         }
         else
         {
             allowed = false;
+            indicator.SetActive(false);
         }
     }
-    private void FlashBack()
+
+    private void OnTriggerEnter(Collider other)
     {
         if (allowed)
         {
-            SceneManager.LoadScene("FlashBack");
+            if (other.CompareTag("Player"))
+            {
+                SceneManager.LoadScene("FlashBack");
+            }
         }
-
     }
 
 }
