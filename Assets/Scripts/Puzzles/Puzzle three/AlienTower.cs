@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class AlienTower : MonoBehaviour
 {
     private bool allowedAccess;
+    [SerializeField] private GameObject keyCard;
 
     private void Start()
     {
@@ -13,7 +14,7 @@ public class AlienTower : MonoBehaviour
     }
     private void Update()
     {
-        if (GameObject.FindWithTag("Firewood") == null)
+        if (keyCard == null)
         {
             allowedAccess = true;
         }
