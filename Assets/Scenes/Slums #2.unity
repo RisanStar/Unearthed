@@ -4040,7 +4040,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6f7af9eb1a072b4fbd17e178a23d6b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  keyCard: {fileID: 630704754}
+  keyCard: {fileID: 1448281209}
 --- !u!65 &816538443
 BoxCollider:
   m_ObjectHideFlags: 0
