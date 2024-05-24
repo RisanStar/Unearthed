@@ -1,6 +1,4 @@
 using Ink.Runtime;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -59,28 +57,11 @@ public class Puzzle1 : MonoBehaviour, IInteractable
         SceneManager.LoadScene("WirePuzzle");
     }
 
-    public void SavePlayer()
-    {
-        SavePosition.SavePlayer(this);
-    }
-    public void LoadPlayer()
-    {
-        PlayerData data = SavePosition.LoadPlayer();
-
-        Wirelevel = data.Wirelevel;
-
-        Vector3 position;
-        position.x = data.position[0];
-        position.y = data.position[1];
-        position.z = data.position[2];
-    }
-
     public void Interact()
     {
         if (Wirelevel == 1)
         {
             WirePuzzle();
-            SavePlayer();
         }
         
     }

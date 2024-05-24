@@ -5,7 +5,6 @@ using UnityEngine;
 using Ink.Runtime;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
-using Ink.UnityIntegration;
 
 public class Dialogue : MonoBehaviour
 {
@@ -26,7 +25,7 @@ public class Dialogue : MonoBehaviour
     private DialogueVariables dialogueVariables;
 
     private Story currentStory;
-    [SerializeField] private InkFile globalsInkFile;
+    [SerializeField] private TextAsset loadGlobalsJSON;
 
     [SerializeField] private KeyCode continueKey;
 
@@ -40,7 +39,7 @@ public class Dialogue : MonoBehaviour
         }
         instance = this;
 
-        dialogueVariables = new DialogueVariables(globalsInkFile.filePath);
+        dialogueVariables = new DialogueVariables(loadGlobalsJSON);
     }
 
     public static Dialogue GetInstance()
