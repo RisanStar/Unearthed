@@ -11376,9 +11376,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e889d003f6408848be6ca69728fe485, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkingBobbingSpeed: 14
-  bobbingAmount: 0.05
-  controller: {fileID: 860315828}
 --- !u!81 &437446722
 AudioListener:
   m_ObjectHideFlags: 0
@@ -21165,14 +21162,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffe6e81dc84df4c47b676f3bd58249da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 7.5
-  jumpSpeed: 8
-  gravity: 20
-  playerCamera: {fileID: 437446720}
-  lookSpeed: 2
-  lookXLimit: 45
-  moveDirection: {x: 0, y: 0, z: 0}
-  canMove: 1
 --- !u!143 &860315829
 CharacterController:
   m_ObjectHideFlags: 0
@@ -37167,18 +37156,7 @@ MonoBehaviour:
   choiceUI: {fileID: 2024258134}
   choice0: {fileID: 332562456}
   choice1: {fileID: 1311466419}
-  globalsInkFile:
-    inkAsset: {fileID: 102900000, guid: 3ad86413ef568564aafa02452cc9e57b, type: 3}
-    jsonAssetDirectory: {fileID: 0}
-    jsonAsset: {fileID: 0}
-    unhandledCompileErrors: []
-    recursiveIncludeErrorPaths: []
-    errors: []
-    warnings: []
-    todos: []
-    masterInkAssets: []
-    localIncludePaths: []
-    includes: []
+  loadGlobalsJSON: {fileID: 4900000, guid: 849722846647075469c6fa0e6ce62803, type: 3}
   continueKey: 101
 --- !u!114 &1566107792
 MonoBehaviour:
@@ -43671,18 +43649,7 @@ MonoBehaviour:
   choiceUI: {fileID: 2024258134}
   choice0: {fileID: 332562456}
   choice1: {fileID: 1311466419}
-  globalsInkFile:
-    inkAsset: {fileID: 102900000, guid: 3ad86413ef568564aafa02452cc9e57b, type: 3}
-    jsonAssetDirectory: {fileID: 0}
-    jsonAsset: {fileID: 0}
-    unhandledCompileErrors: []
-    recursiveIncludeErrorPaths: []
-    errors: []
-    warnings: []
-    todos: []
-    masterInkAssets: []
-    localIncludePaths: []
-    includes: []
+  loadGlobalsJSON: {fileID: 4900000, guid: 849722846647075469c6fa0e6ce62803, type: 3}
   continueKey: 101
 --- !u!114 &1866360201
 MonoBehaviour:
