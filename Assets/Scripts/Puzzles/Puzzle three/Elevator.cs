@@ -26,17 +26,6 @@ public class Elevator : MonoBehaviour
 
     }
 
-    private void CantMove()
-    {
-        player.GetComponent<Rigidbody>().isKinematic = true;
-    }
-
-    private void CanMove()
-    {
-        player.GetComponent<Rigidbody>().isKinematic = false;
-    }
-
-
     private IEnumerator MoveElevator()
     {
         yield return new WaitForSeconds(.5f);

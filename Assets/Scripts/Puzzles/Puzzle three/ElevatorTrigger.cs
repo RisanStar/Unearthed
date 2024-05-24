@@ -9,11 +9,13 @@ public class ElevatorTrigger : MonoBehaviour
 
     public float doorCloseTime;
     public bool isInElevator { get; private set; }
+    public bool doorIsClosing { get; private set; }
 
 
     private void Start()
     {
         isInElevator = false;
+        doorIsClosing = false;
     }
 
 
@@ -22,16 +24,19 @@ public class ElevatorTrigger : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             Debug.Log("You have entered the collision");
+            doorIsClosing = true;
             StartCoroutine(StartElevator());
+            
         }
         else
             StopCoroutine(StartElevator());
+            
     }
 
     private IEnumerator StartElevator()
     {
         yield return new WaitForSeconds(doorCloseTime);
-        Vector3 target = new (realElevator.transform.position.x, realElevator.transform.position.y + 5f, realElevator.transform.position.z);
+        Vector3 target = new (realElevator.transform.position.x, realElevator.transform.position.y + 2f, realElevator.transform.position.z);
         player.transform.position = target;
         yield return new WaitForSeconds(1f);
         isInElevator = true;
