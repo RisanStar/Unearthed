@@ -4596,7 +4596,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 082abcf4d81b9c948af3cfc6a08eb462, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  keyCard: {fileID: 693252777}
+  keyCard: {fileID: 364536362}
   hutLight: {fileID: 1334900658}
 --- !u!1 &853737737
 GameObject:
